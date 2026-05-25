@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Настройка темной темы */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* Состояние ожидания скролла */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(25px);
+  will-change: transform, opacity;
+  /* Этот транзишен отвечает ТОЛЬКО за красивый въезд при скролле */
+  transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), 
+              transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Активация */
+.reveal-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
