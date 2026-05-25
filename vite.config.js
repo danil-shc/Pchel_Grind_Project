@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     tailwindcss(),
   ],
-  base: 'Pchel_Grind_Project',
+  base: '/Pchel_Grind_Project/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
