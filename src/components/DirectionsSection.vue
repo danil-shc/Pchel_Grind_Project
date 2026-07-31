@@ -3,8 +3,8 @@ import { Dna, Microscope, Sparkles, ArrowUpRight } from 'lucide-vue-next'
 </script>
 
 <template>
-  <section class="w-full">
-    <div v-reveal class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 sm:pt-6 md:pt-10 pb-8 sm:pb-12 md:pb-16 border-t border-slate-200/60 dark:border-slate-800/60">
+  <section id="directions" class="w-full py-6 sm:py-10 md:py-14 border-t border-slate-200/60 dark:border-slate-800/60">
+    <div v-reveal class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-6 md:mb-12 reveal-item">
       <div>
         <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Направления работы</span>
@@ -22,11 +22,11 @@ import { Dna, Microscope, Sparkles, ArrowUpRight } from 'lucide-vue-next'
             <Dna :size="24" />
           </div>
           <h3 class="text-lg sm:text-xl font-bold mb-3 flex items-center justify-between text-slate-900 dark:text-white">
-            Молекулярная биология
+            Молекулярная генетика & Диагностика
             <ArrowUpRight :size="16" class="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-slate-400" />
           </h3>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Исследование клеточных механизмов, генетических маркеров и молекулярных структур.
+            Разработка диагностических ПЦР-тест-систем, поиск генетических маркеров фиброзных и урологических заболеваний. Исследования болезни Пейрони и кавернозного фиброза (El Clinic, Сеченовский Университет).
           </p>
         </div>
       </div>
@@ -37,11 +37,11 @@ import { Dna, Microscope, Sparkles, ArrowUpRight } from 'lucide-vue-next'
             <Microscope :size="24" />
           </div>
           <h3 class="text-lg sm:text-xl font-bold mb-3 flex items-center justify-between text-slate-900 dark:text-white">
-            Лаборатория
+            Биоинформатика & SNP-анализ
             <ArrowUpRight :size="16" class="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-slate-400" />
           </h3>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Ведение высокотехнологичных практических занятий для студентов медицинских специальностей.
+            Биоинформатическая обработка данных NGS и GWAS, аннотация вариантов (NCBI, ClinVar, Ensembl) и филогенетический анализ. Визуализация результатов для клинических отчётов в Genotek.
           </p>
         </div>
       </div>
@@ -52,11 +52,11 @@ import { Dna, Microscope, Sparkles, ArrowUpRight } from 'lucide-vue-next'
             <Sparkles :size="24" />
           </div>
           <h3 class="text-lg sm:text-xl font-bold mb-3 flex items-center justify-between text-slate-900 dark:text-white">
-            Популяризация науки
+            Агрогенетика & Проектный менеджмент
             <ArrowUpRight :size="16" class="opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all text-slate-400" />
           </h3>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            Выступления на открытых лекториях и создание контента о сложной биологии.
+            Руководство проектом по получению и молекулярно-генетической оценке дигаплоидных линий рапса в ЦРО «Интеграция». Разработка маркеров устойчивости и молекулярная паспортизация культур.
           </p>
         </div>
       </div>

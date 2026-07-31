@@ -1,10 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 import HeroSection from './components/HeroSection.vue'
+import StatsSection from './components/StatsSection.vue'
 import DirectionsSection from './components/DirectionsSection.vue'
 import GallerySection from './components/GallerySection.vue'
 import StudentsSection from './components/StudentsSection.vue'
+import EducationSection from './components/EducationSection.vue'
 import ContactsSection from './components/ContactsSection.vue'
+import FooterSection from './components/FooterSection.vue'
 
 const isDark = ref(true)
 </script>
@@ -15,11 +18,15 @@ const isDark = ref(true)
 
       <main class="w-full">
         <HeroSection v-model:isDark="isDark" />
+        <StatsSection />
         <DirectionsSection />
         <GallerySection />
         <StudentsSection />
+        <EducationSection />
         <ContactsSection />
       </main>
+
+      <FooterSection />
 
     </div>
   </div>

@@ -3,10 +3,14 @@ import { User, Send, BookOpen } from 'lucide-vue-next'
 import TheHeader from './TheHeader.vue'
 
 const isDark = defineModel('isDark', { type: Boolean, default: false })
+
+const scrollToNext = () => {
+  document.querySelector('#directions')?.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <template>
-  <section class="h-auto min-h-0 pb-4 lg:pb-8 lg:h-dvh lg:max-h-dvh overflow-hidden flex flex-col animate-fade-in-up">
+  <section class="relative h-auto min-h-0 pb-12 lg:pb-16 lg:h-dvh lg:max-h-dvh overflow-hidden flex flex-col animate-fade-in-up">
     <TheHeader v-model:isDark="isDark" />
 
     <div class="flex-1 min-h-0 flex flex-col justify-between mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-3 pb-4 sm:pt-4 lg:pb-8">
@@ -100,6 +104,24 @@ const isDark = defineModel('isDark', { type: Boolean, default: false })
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Плавающая стрелка скролла -->
+    <div 
+      @click="scrollToNext"
+      class="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 cursor-pointer group"
+    >
+      <span class="text-[10px] uppercase tracking-widest text-slate-500 group-hover:text-emerald-400 transition-colors duration-300 select-none">
+        Листать
+      </span>
+      <svg 
+        class="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 group-hover:text-emerald-400 transition-colors duration-300 animate-bounce" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
     </div>
   </section>
 </template>

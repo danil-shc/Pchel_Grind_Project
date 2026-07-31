@@ -1,10 +1,10 @@
 <script setup>
-import { Camera } from 'lucide-vue-next'
+import { Camera, Presentation, Microscope, Binary, Users } from 'lucide-vue-next'
 </script>
 
 <template>
-  <section class="w-full">
-    <div v-reveal class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16 border-t border-slate-200/60 dark:border-slate-800/60">
+  <section class="w-full py-6 sm:py-10 md:py-14 border-t border-slate-200/60 dark:border-slate-800/60">
+    <div v-reveal class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8 md:mb-14 reveal-item">
       <div class="p-3 sm:p-4 rounded-2xl sm:rounded-3xl bg-amber-500/10 text-amber-500 shadow-inner border border-amber-500/20">
         <Camera :size="24" class="sm:w-8 sm:h-8" stroke-width="1.5" />
@@ -20,21 +20,23 @@ import { Camera } from 'lucide-vue-next'
       </div>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+    <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 lg:gap-6">
 
       <div class="reveal-item delay-100">
         <div
-          class="group aspect-[3/4] max-h-[320px] sm:max-h-[420px] md:max-h-none rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-emerald-500/10 hover:border-emerald-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_37_2026-05-24_20-54-57.webp" alt="Академическая работа"
+          class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-emerald-500/10 hover:border-emerald-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
+          <img src="./assets/images/photo_37_2026-05-24_20-54-57.webp" alt="Наука и спикерство"
             class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-3 sm:p-4 md:p-6 flex flex-col justify-end z-10">
-            <span
-              class="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold text-emerald-400 uppercase tracking-wider bg-emerald-500/10 border border-emerald-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full w-max">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Наука
+          <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
+            <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">
+              <Presentation class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400" stroke-width="2" />
+              Наука & Спикерство
             </span>
-            <h4 class="text-xs sm:text-sm md:text-base font-bold text-white mt-2 sm:mt-3 leading-snug tracking-tight">
-              Исследовательская деятельность на базе НИУ Сеченова.
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-2.5 sm:p-4 lg:p-6 flex flex-col justify-end z-10">
+            <h4 class="text-[11px] leading-tight sm:text-sm lg:text-base font-bold text-slate-100 sm:text-white tracking-tight">
+              Исследовательская деятельность в Сеченовском Университете, доклады на III Конгрессе молодых учёных и финал Sechenov.Tech.
             </h4>
           </div>
         </div>
@@ -42,17 +44,19 @@ import { Camera } from 'lucide-vue-next'
 
       <div class="reveal-item delay-200">
         <div
-          class="group aspect-[3/4] max-h-[320px] sm:max-h-[420px] md:max-h-none rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-blue-500/10 hover:border-blue-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_16_2026-05-24_20-54-57.webp" alt="Работа в лаборатории"
+          class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-blue-500/10 hover:border-blue-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
+          <img src="./assets/images/photo_16_2026-05-24_20-54-57.webp" alt="Лаборатория"
             class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100 filter contrast-125">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-3 sm:p-4 md:p-6 flex flex-col justify-end z-10">
-            <span
-              class="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold text-blue-400 uppercase tracking-wider bg-blue-500/10 border border-blue-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full w-max">
-              <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span> Лаборатория
+          <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
+            <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">
+              <Microscope class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400" stroke-width="2" />
+              Лаборатория
             </span>
-            <h4 class="text-xs sm:text-sm md:text-base font-bold text-white mt-2 sm:mt-3 leading-snug tracking-tight">
-              Работа с клеточными культурами в боксах Neoteric Landystand.
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-2.5 sm:p-4 lg:p-6 flex flex-col justify-end z-10">
+            <h4 class="text-[11px] leading-tight sm:text-sm lg:text-base font-bold text-slate-100 sm:text-white tracking-tight">
+              Молекулярно-генетические исследования, конструирование ПЦР-панелей и работа с клеточными культурами в боксах.
             </h4>
           </div>
         </div>
@@ -60,17 +64,19 @@ import { Camera } from 'lucide-vue-next'
 
       <div class="reveal-item delay-300">
         <div
-          class="group aspect-[3/4] max-h-[320px] sm:max-h-[420px] md:max-h-none rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-blue-500/10 hover:border-blue-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_24_2026-05-24_20-54-57.webp" alt="Работа в лаборатории"
+          class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-violet-500/10 hover:border-violet-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
+          <img src="./assets/images/photo_24_2026-05-24_20-54-57.webp" alt="Биоинформатика и анализ"
             class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100 filter contrast-125">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-3 sm:p-4 md:p-6 flex flex-col justify-end z-10">
-            <span
-              class="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold text-violet-400 uppercase tracking-wider bg-violet-500/10 border border-violet-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full w-max">
-              <span class="w-1.5 h-1.5 rounded-full bg-violet-400"></span> Анализ
+          <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
+            <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">
+              <Binary class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400" stroke-width="2" />
+              Биоинформатика & Анализ
             </span>
-            <h4 class="text-xs sm:text-sm md:text-base font-bold text-white mt-2 sm:mt-3 leading-snug tracking-tight">
-              Сбор образцов, ведение протоколов и аналитическая биофизика.
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-2.5 sm:p-4 lg:p-6 flex flex-col justify-end z-10">
+            <h4 class="text-[11px] leading-tight sm:text-sm lg:text-base font-bold text-slate-100 sm:text-white tracking-tight">
+              Обработка данных NGS, анализ SNP-вариантов, ведение протоколов и аналитическая биофизика (Genotek / ИБГ РАН).
             </h4>
           </div>
         </div>
@@ -78,17 +84,19 @@ import { Camera } from 'lucide-vue-next'
 
       <div class="reveal-item delay-400">
         <div
-          class="group aspect-[3/4] max-h-[320px] sm:max-h-[420px] md:max-h-none rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-amber-500/10 hover:border-amber-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_6_2026-05-24_20-54-57.webp" alt="Преподавание"
+          class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-amber-500/10 hover:border-amber-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
+          <img src="./assets/images/photo_6_2026-05-24_20-54-57.webp" alt="Наставничество"
             class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100 filter brightness-95">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-3 sm:p-4 md:p-6 flex flex-col justify-end z-10">
-            <span
-              class="inline-flex items-center gap-1.5 text-[9px] sm:text-[10px] font-bold text-amber-400 uppercase tracking-wider bg-amber-500/10 border border-amber-500/30 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full w-max">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span> Менторство
+          <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
+            <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">
+              <Users class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400" stroke-width="2" />
+              Наставничество
             </span>
-            <h4 class="text-xs sm:text-sm md:text-base font-bold text-white mt-2 sm:mt-3 leading-snug tracking-tight">
-              Подготовка олимпиадников и ведение авторских лекториев.
+          </div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent p-2.5 sm:p-4 lg:p-6 flex flex-col justify-end z-10">
+            <h4 class="text-[11px] leading-tight sm:text-sm lg:text-base font-bold text-slate-100 sm:text-white tracking-tight">
+              Руководство проектными командами в ОЦ «Сириус», подготовка резерва сборной Москвы и олимпиадников ВсОШ.
             </h4>
           </div>
         </div>
