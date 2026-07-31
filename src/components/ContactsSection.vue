@@ -3,17 +3,18 @@ import { Mail, Send } from 'lucide-vue-next'
 </script>
 
 <template>
-  <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <section v-reveal class="mt-12 md:mt-20 lg:mt-32 pt-10 md:pt-14 lg:pt-20 border-t border-slate-200/60 dark:border-slate-800/60 w-full">
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start w-full">
+  <section class="w-full">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+      
+      <div v-reveal class="border-t border-slate-200/60 dark:border-slate-800/60 pt-8 sm:pt-12 md:pt-16 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start w-full">
         
         <div class="lg:col-span-2 reveal-item w-full">
-          <span class="text-xs font-bold tracking-widest text-emerald-500 uppercase">Обратная связь</span>
-          <h2 class="text-3xl font-black tracking-tight mt-2 sm:text-4xl mb-4 text-slate-900 dark:text-white">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Обратная связь</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 mb-4 text-slate-900 dark:text-white">
             Давайте сотрудничать
           </h2>
-          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
             Открыт для совместных научных проектов, рецензирования публикаций, выступлений на форумах и лекториях.
           </p>
 
@@ -33,7 +34,7 @@ import { Mail, Send } from 'lucide-vue-next'
           </div>
         </div>
 
-        <div class="lg:col-span-3 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 shadow-sm rounded-3xl p-6 sm:p-8 reveal-item delay-100 w-full">
+        <div class="lg:col-span-3 bg-white dark:bg-[#0d131f] border border-slate-200/80 dark:border-slate-800/80 shadow-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 reveal-item delay-100 w-full">
           <form @submit.prevent class="space-y-5 w-full">
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 w-full">
@@ -63,12 +64,13 @@ import { Mail, Send } from 'lucide-vue-next'
         </div>
         
       </div>
-
+      
       <div class="mt-12 md:mt-24 pt-8 border-t border-slate-200/40 dark:border-slate-800/40 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium w-full">
         <span>© 2026 Пчелинцев М.И. Все права защищены.</span>
         <span>НИУ Сеченова • Кафедра биологии</span>
       </div>
-    </section>
+      </div>
 
-  </div>
+    </div>
+  </section>
 </template>
