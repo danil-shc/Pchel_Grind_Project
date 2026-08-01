@@ -25,7 +25,7 @@ import { Camera, Presentation, Microscope, Binary, Users } from 'lucide-vue-next
       <div class="reveal-item delay-100">
         <div
           class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-emerald-500/10 hover:border-emerald-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_37_2026-05-24_20-54-57.webp" alt="Наука и спикерство"
+          <img src="./assets/images/photo_37.webp" alt="Наука и спикерство"
             class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100">
           <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
             <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">
@@ -45,7 +45,7 @@ import { Camera, Presentation, Microscope, Binary, Users } from 'lucide-vue-next
       <div class="reveal-item delay-200">
         <div
           class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-blue-500/10 hover:border-blue-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_16_2026-05-24_20-54-57.webp" alt="Лаборатория"
+          <img src="./assets/images/photo_16.webp" alt="Лаборатория"
             class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100 filter contrast-125">
           <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
             <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">
@@ -65,7 +65,7 @@ import { Camera, Presentation, Microscope, Binary, Users } from 'lucide-vue-next
       <div class="reveal-item delay-300">
         <div
           class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-violet-500/10 hover:border-violet-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_24_2026-05-24_20-54-57.webp" alt="Биоинформатика и анализ"
+          <img src="./assets/images/photo_24.webp" alt="Биоинформатика и анализ"
             class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100 filter contrast-125">
           <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
             <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">
@@ -85,7 +85,7 @@ import { Camera, Presentation, Microscope, Binary, Users } from 'lucide-vue-next
       <div class="reveal-item delay-400">
         <div
           class="group w-full aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-slate-200/60 dark:border-slate-800/80 shadow-sm transition-all duration-500 hover:shadow-amber-500/10 hover:border-amber-500/30 hover:-translate-y-2 transform-gpu bg-slate-900">
-          <img src="./assets/images/photo_6_2026-05-24_20-54-57.webp" alt="Наставничество"
+          <img src="./assets/images/photo_6.webp" alt="Наставничество"
             class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105 transform-gpu opacity-80 group-hover:opacity-100 filter brightness-95">
           <div class="absolute top-2 left-2 sm:top-4 sm:left-4 lg:top-6 lg:left-6 z-20">
             <span class="inline-flex items-center gap-1 sm:gap-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-slate-900/80 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] sm:text-xs font-medium shadow-md">

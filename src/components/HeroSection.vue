@@ -1,11 +1,54 @@
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import { User, Send, BookOpen } from 'lucide-vue-next'
 import TheHeader from './TheHeader.vue'
 
+// Изображения для слайдера
+import photo1 from '@/components/assets/images/photo_2.webp'
+import photo2 from '@/components/assets/images/photo_10.webp'
+import photo3 from '@/components/assets/images/photo_40.webp'
+
+const slides = [photo1, photo2, photo3]
+
 const isDark = defineModel('isDark', { type: Boolean, default: false })
 
+// Логика слайдера
+const currentIndex = ref(0)
+const isPaused = ref(false)
+let timer = null
+
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % slides.length
+}
+
+const goToSlide = (index) => {
+  currentIndex.value = index
+  resetTimer()
+}
+
+const startTimer = () => {
+  if (timer) clearInterval(timer)
+  timer = setInterval(() => {
+    if (!isPaused.value) {
+      nextSlide()
+    }
+  }, 5000)
+}
+
+const resetTimer = () => {
+  startTimer()
+}
+
+onMounted(() => {
+  startTimer()
+})
+
+onUnmounted(() => {
+  if (timer) clearInterval(timer)
+})
+
 const scrollToNext = () => {
-  document.querySelector('#directions')?.scrollIntoView({ behavior: 'smooth' })
+  document.querySelector('#stats')?.scrollIntoView({ behavior: 'smooth' })
 }
 </script>
 
@@ -33,11 +76,41 @@ const scrollToNext = () => {
             <User :size="12" />Обо мне
           </span>
 
-          <!-- Фотография как фоновый слой -->
+          <!-- Фотография как фоновый слой (слайдер) -->
           <div
-            class="absolute inset-0 w-full h-full overflow-hidden z-0 md:relative md:w-1/2 md:border-l md:border-slate-100 md:dark:border-slate-800/50">
-            <img src="./assets/images/photo_10_2026-05-24_20-54-57.webp" alt="Михаил Игоревич Пчелинцев"
-              class="absolute inset-0 h-full w-full object-cover object-top pointer-events-none transition-transform duration-500 group-hover:scale-105 transform-gpu" />
+            class="absolute inset-0 w-full h-full overflow-hidden z-0 md:relative md:w-1/2 md:border-l md:border-slate-100 md:dark:border-slate-800/50"
+            @mouseenter="isPaused = true"
+            @mouseleave="isPaused = false">
+            
+            <!-- Слайды с Cross-Fade и Ken Burns эффектом -->
+            <div
+              v-for="(slide, index) in slides"
+              :key="index"
+              class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out"
+              :class="currentIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0'">
+              <img
+                :src="slide"
+                alt="Михаил Игоревич Пчелинцев"
+                class="absolute inset-0 h-full w-full object-cover object-top pointer-events-none transition-transform duration-[5000ms] ease-out transform-gpu"
+                :class="currentIndex === index ? 'scale-100' : 'scale-105'" />
+            </div>
+
+            <!-- Индикаторы прогресса -->
+            <div class="absolute bottom-4 left-4 right-4 z-20 flex gap-2">
+              <div
+                v-for="(_, index) in slides"
+                :key="index"
+                @click="goToSlide(index)"
+                class="h-1 rounded-full bg-slate-900/60 backdrop-blur-md overflow-hidden flex-1 cursor-pointer transition-all duration-300 hover:bg-slate-900/80">
+                <div
+                  class="h-full bg-emerald-500 transition-all ease-linear"
+                  :style="{
+                    width: currentIndex === index && !isPaused ? '100%' : currentIndex > index ? '100%' : '0%',
+                    transitionDuration: currentIndex === index && !isPaused ? '5000ms' : '300ms'
+                  }">
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Текстовый блок внизу с градиентом -->
