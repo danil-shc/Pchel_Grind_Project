@@ -4,11 +4,25 @@ import { User, Send, BookOpen } from 'lucide-vue-next'
 import TheHeader from './TheHeader.vue'
 
 // Изображения для слайдера
-import photo1 from '@/components/assets/images/photo_2.webp'
-import photo2 from '@/components/assets/images/photo_10.webp'
-import photo3 from '@/components/assets/images/photo_40.webp'
+import photo2 from '@/components/assets/images/photo_2.webp'
+import photo10 from '@/components/assets/images/photo_10.webp'
+import photo40 from '@/components/assets/images/photo_40.webp'
 
-const slides = [photo1, photo2, photo3]
+const slides = [
+  {
+    src: photo2,
+    position: 'object-center'
+  },
+  {
+    src: photo10,
+    // Смещаем фото наверх на мобилках, чтобы лица были над текстом:
+    position: 'object-[center_15%] sm:object-center'
+  },
+  {
+    src: photo40,
+    position: 'object-center'
+  }
+]
 
 const isDark = defineModel('isDark', { type: Boolean, default: false })
 
@@ -53,7 +67,7 @@ const scrollToNext = () => {
 </script>
 
 <template>
-  <section class="relative h-auto min-h-0 pb-12 lg:pb-16 lg:h-dvh lg:max-h-dvh overflow-hidden flex flex-col animate-fade-in-up">
+  <section class="relative h-auto min-h-0 pb-16 md:pb-20 lg:pb-24 lg:h-dvh lg:max-h-dvh overflow-hidden flex flex-col animate-fade-in-up">
     <TheHeader v-model:isDark="isDark" />
 
     <div class="flex-1 min-h-0 flex flex-col justify-between mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-3 pb-4 sm:pt-4 lg:pb-8">
@@ -89,10 +103,13 @@ const scrollToNext = () => {
               class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out"
               :class="currentIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0'">
               <img
-                :src="slide"
+                :src="slide.src"
                 alt="Михаил Игоревич Пчелинцев"
-                class="absolute inset-0 h-full w-full object-cover object-top pointer-events-none transition-transform duration-[5000ms] ease-out transform-gpu"
-                :class="currentIndex === index ? 'scale-100' : 'scale-105'" />
+                class="absolute inset-0 h-full w-full object-cover pointer-events-none transition-transform duration-[5000ms] ease-out transform-gpu"
+                :class="[
+                  slide.position,
+                  currentIndex === index ? 'scale-100' : 'scale-105'
+                ]" />
             </div>
 
             <!-- Индикаторы прогресса -->
@@ -182,13 +199,13 @@ const scrollToNext = () => {
     <!-- Плавающая стрелка скролла -->
     <div 
       @click="scrollToNext"
-      class="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 cursor-pointer group"
+      class="absolute bottom-4 md:bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-center gap-1.5 cursor-pointer select-none group transition-opacity duration-300 hover:opacity-100 opacity-70"
     >
-      <span class="text-[10px] uppercase tracking-widest text-slate-500 group-hover:text-emerald-400 transition-colors duration-300 select-none">
+      <span class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-slate-400 group-hover:text-emerald-400 transition-colors">
         Листать
       </span>
       <svg 
-        class="w-5 h-5 sm:w-6 sm:h-6 text-slate-400 group-hover:text-emerald-400 transition-colors duration-300 animate-bounce" 
+        class="w-4 h-4 text-slate-400 group-hover:text-emerald-400 transition-all duration-300 group-hover:translate-y-1 animate-bounce" 
         fill="none" 
         viewBox="0 0 24 24" 
         stroke="currentColor"

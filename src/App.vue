@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import HeroSection from './components/HeroSection.vue'
 import StatsSection from './components/StatsSection.vue'
 import DirectionsSection from './components/DirectionsSection.vue'
-import GallerySection from './components/GallerySection.vue'
 import StudentsSection from './components/StudentsSection.vue'
 import EducationSection from './components/EducationSection.vue'
 import ContactsSection from './components/ContactsSection.vue'
@@ -20,7 +19,6 @@ const isDark = ref(true)
         <HeroSection v-model:isDark="isDark" />
         <StatsSection />
         <DirectionsSection />
-        <GallerySection />
         <StudentsSection />
         <EducationSection />
         <ContactsSection />
