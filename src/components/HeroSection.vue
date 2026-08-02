@@ -72,11 +72,11 @@ const scrollToNext = () => {
 
     <div class="flex-1 min-h-0 flex flex-col justify-between mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-3 pb-4 sm:pt-4 lg:pb-8">
       <div class="shrink-0 mb-3 sm:mb-4 max-w-2xl">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-2 sm:mb-3">
-          Исследования, меняющие взгляд на <span class="text-emerald-500 dark:text-emerald-400">биологию</span>.
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-2 sm:mb-3">
+          Академическое портфолио <span class="text-emerald-400">исследователя</span>.
         </h1>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-          Цифровое портфолио и академический профиль преподавателя и исследователя.
+        <p class="text-sm sm:text-base text-slate-300 font-normal mt-0 mb-0 opacity-90 leading-normal">
+          Генетика, биотехнологии и разработка ПЦР-систем.
         </p>
       </div>
 
