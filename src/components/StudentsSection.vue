@@ -10,7 +10,7 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
           <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Научный и инновационный вклад</span>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 text-slate-900 dark:text-white">Проекты, патенты & публикации</h2>
         </div>
-        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-sm mt-4 md:mt-0 leading-relaxed">
+        <p class="text-sm sm:text-base lg:text-lg text-slate-300 font-normal leading-relaxed max-w-xl opacity-90 mt-4 md:mt-0">
           Практическая имплементация научных исследований в коммерческие и прикладные решения.
         </p>
       </div>
@@ -33,7 +33,7 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
               <h3 class="text-xl sm:text-2xl lg:text-3xl font-black mb-3 text-white">
                 RARE-ID — Платформа диагностики орфанных заболеваний
               </h3>
-              <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-4">
+              <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal mb-4">
                 Разработка концепции и ML-алгоритмов для раннего выявления редких иммунопатологий.
               </p>
               <div class="flex flex-wrap gap-2">
@@ -68,7 +68,7 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
                   <FileText :size="18" class="text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <p class="text-xs font-bold text-amber-400 mb-1">Патент № 243759</p>
-                    <p class="text-sm text-slate-300 leading-relaxed">
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                       Полезная модель «Кавернотом Меньщикова» (урология, хирургический инструмент)
                     </p>
                   </div>
@@ -79,7 +79,7 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
                   <FileText :size="18" class="text-amber-400 shrink-0 mt-0.5" />
                   <div>
                     <p class="text-xs font-bold text-amber-400 mb-1">Заявка № 2025137491</p>
-                    <p class="text-sm text-slate-300 leading-relaxed">
+                    <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                       Набор олигонуклеотидных праймеров для генетической диагностики аквакультуры (радужная форель)
                     </p>
                   </div>
@@ -93,8 +93,8 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
             <div class="w-12 h-12 rounded-xl bg-linear-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 flex items-center justify-center mb-5">
               <FileText :size="24" class="text-violet-400" />
             </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white">21 Научная публикация</h3>
-            <p class="text-sm text-slate-300 leading-relaxed mb-6 flex-1">
+            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white">Научные публикации</h3>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal mb-6 flex-1">
               Работы в рецензируемых журналах по урологии, иммуногенетике, вирусологии (SARS-CoV-2, HIV-1) и агробиологии.
             </p>
             <a 

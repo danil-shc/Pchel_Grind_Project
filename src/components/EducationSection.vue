@@ -14,7 +14,7 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 mb-4 text-slate-900 dark:text-white">
           Академическая база & Результаты
         </h2>
-        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-3xl">
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
           Фундаментальное медицинское образование и успехи воспитанников на всероссийском уровне.
         </p>
       </div>
@@ -46,10 +46,10 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
                   <h4 class="text-base sm:text-lg font-bold text-white mb-1">
                     Сеченовский Университет (6 курс)
                   </h4>
-                  <p class="text-sm font-semibold text-emerald-400 mb-2">
+                  <p class="text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Лечебное дело, специализация «Врач-исследователь»
                   </p>
-                  <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p class="text-sm text-slate-300 leading-relaxed font-normal mt-1">
                     Институт клинической медицины. Профильные области: генетика, молекулярная биология, урология.
                   </p>
                 </div>
@@ -62,10 +62,10 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
                   <h4 class="text-base sm:text-lg font-bold text-white mb-1">
                     НГУ, Цифровая кафедра (2024)
                   </h4>
-                  <p class="text-sm font-semibold text-emerald-400 mb-2">
+                  <p class="text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Практическая биоинформатика и молекулярная биология
                   </p>
-                  <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p class="text-sm text-slate-300 leading-relaxed font-normal mt-1">
                     Диплом программы «Технологии управления свойствами биологических объектов».
                   </p>
                 </div>
@@ -78,10 +78,10 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
                   <h4 class="text-base sm:text-lg font-bold text-white mb-1">
                     ОЦ «Сириус» и УрФУ (2024)
                   </h4>
-                  <p class="text-sm font-semibold text-emerald-400 mb-2">
+                  <p class="text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Повышение квалификации
                   </p>
-                  <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p class="text-sm text-slate-300 leading-relaxed font-normal mt-1">
                     Курс по основам наставнической деятельности для работы с одарёнными школьниками.
                   </p>
                 </div>
@@ -114,7 +114,7 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
                   <Award :size="16" class="text-emerald-400" />
                   <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">8</div>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-300 leading-tight">
+                <p class="text-sm text-slate-300 leading-relaxed">
                   Победителей и призёров олимпиад из перечня РСОШ
                 </p>
               </div>
@@ -125,7 +125,7 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
                   <Trophy :size="16" class="text-blue-400" />
                   <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">6 + 2</div>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-300 leading-tight">
+                <p class="text-sm text-slate-300 leading-relaxed">
                   Призёров региона и участников финала ВсОШ
                 </p>
               </div>
@@ -136,7 +136,7 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
                   <CheckCircle :size="16" class="text-violet-400" />
                   <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">6</div>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-300 leading-tight">
+                <p class="text-sm text-slate-300 leading-relaxed">
                   Победителей конкурса «Большие вызовы»
                 </p>
               </div>
@@ -147,7 +147,7 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
                   <BookOpen :size="16" class="text-amber-400" />
                   <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">3</div>
                 </div>
-                <p class="text-xs sm:text-sm text-slate-300 leading-tight">
+                <p class="text-sm text-slate-300 leading-relaxed">
                   Победителя конференции «Старт в медицину»
                 </p>
               </div>
@@ -156,7 +156,7 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
 
             <!-- Текстовый подвал с дополнительной информацией -->
             <div class="bg-slate-950/60 border border-slate-700/50 rounded-xl p-4">
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p class="text-sm text-slate-300 leading-relaxed font-normal">
                 Куратор группы резерва сборной Москвы по биологии. Наставник-методист 7 проектных лагерей «Иннагрики». Составитель заданий НТО и Всесибирской олимпиады.
               </p>
             </div>

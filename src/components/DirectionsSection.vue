@@ -13,7 +13,7 @@ import leader from './assets/images/photo_41.webp'
           <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">Направления работы</span>
           <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 text-slate-900 dark:text-white">Направления и экспертиза</h2>
         </div>
-        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 max-w-sm mt-4 md:mt-0 leading-relaxed">
+        <p class="text-sm sm:text-base lg:text-lg text-slate-300 font-normal leading-relaxed max-w-xl opacity-90 mt-4 md:mt-0">
           Ключевые векторы академической и практической деятельности в действии.
         </p>
       </div>
@@ -26,7 +26,7 @@ import leader from './assets/images/photo_41.webp'
               alt="Молекулярная генетика" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 via-60% to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/70 to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-400 shadow-lg">
               Лаборатория
@@ -36,7 +36,7 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-md">
                 Молекулярная генетика
               </h3>
-              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal max-w-2xl opacity-95">
+              <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-2xl">
                 Разработка ПЦР-тест-систем, поиск генетических маркеров, конструирование панелей и исследования урологических заболеваний в Сеченовском Университете.
               </p>
             </div>
@@ -50,7 +50,7 @@ import leader from './assets/images/photo_41.webp'
               alt="Биоинформатика" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 via-60% to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/70 to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-400 shadow-lg">
               Биоинформатика
@@ -60,7 +60,7 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-md">
                 Биоинформатика & SNP-анализ
               </h3>
-              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal opacity-95">
+              <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                 Обработка данных NGS и GWAS, аннотация вариантов (NCBI, ClinVar, Ensembl), ведение протоколов и аналитическая биофизика (Genotek / ИБГ РАН).
               </p>
             </div>
@@ -74,7 +74,7 @@ import leader from './assets/images/photo_41.webp'
               alt="Агрогенетика и проекты" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 via-60% to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/70 to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-400 shadow-lg">
               Агробиотех & Проекты
@@ -84,7 +84,7 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-md">
                 Агрогенетика & Менеджмент
               </h3>
-              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal opacity-95">
+              <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                 Молекулярно-генетическая оценка дигаплоидных линий рапса в ЦРО «Интеграция», разработка маркеров устойчивости и паспортизация культур.
               </p>
             </div>
@@ -98,7 +98,7 @@ import leader from './assets/images/photo_41.webp'
               alt="Наука и спикерство" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 via-60% to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/70 to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-400 shadow-lg">
               Наставничество & Спикерство
@@ -108,7 +108,7 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 leading-tight drop-shadow-md">
                 Наука & Олимпиадное движение
               </h3>
-              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal max-w-2xl opacity-95">
+              <p class="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-2xl">
                 Доклады на конгрессах учёных, руководство проектными командами в ОЦ «Сириус», подготовка резерва сборной Москвы и победителей ВсОШ.
               </p>
             </div>

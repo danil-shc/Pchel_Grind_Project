@@ -32,7 +32,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgPubs" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
@@ -49,7 +49,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Публикация
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
                 Урология, иммуногенетика, агробиотех, вирусология (<span class="text-emerald-400 font-medium">ORCID</span>, <span class="text-emerald-400 font-medium">РИНЦ</span>)
               </p>
             </div>
@@ -63,7 +63,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgPatents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
@@ -80,7 +80,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Патента и разработки
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
                 <span class="text-blue-400 font-medium">Кавернотом Меньщикова</span> и <span class="text-blue-400 font-medium">ПЦР-панели</span> для аквакультуры
               </p>
             </div>
@@ -94,7 +94,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgExp" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
@@ -111,7 +111,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Опыта в генетике
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
                 <span class="text-purple-400 font-medium">Genotek</span>, <span class="text-purple-400 font-medium">Сеченовский Университет</span>, <span class="text-purple-400 font-medium">ИБГ РАН</span>, <span class="text-purple-400 font-medium">ЦРО «Интеграция»</span>
               </p>
             </div>
@@ -125,7 +125,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgStudents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
@@ -142,7 +142,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Победителей олимпиад
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
                 Подготовка учеников <span class="text-amber-400 font-medium">ВсОШ</span>, <span class="text-amber-400 font-medium">«Большие вызовы»</span>, <span class="text-amber-400 font-medium">НТО</span>
               </p>
             </div>
