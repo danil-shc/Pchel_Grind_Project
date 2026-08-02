@@ -49,8 +49,8 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Публикация
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
-                Урология, иммуногенетика, агробиотех, вирусология (ORCID, РИНЦ)
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+                Урология, иммуногенетика, агробиотех, вирусология (<span class="text-emerald-400 font-medium">ORCID</span>, <span class="text-emerald-400 font-medium">РИНЦ</span>)
               </p>
             </div>
           </div>
@@ -80,8 +80,8 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Патента и разработки
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
-                Кавернотом Меньщикова и ПЦР-панели для аквакультуры
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+                <span class="text-blue-400 font-medium">Кавернотом Меньщикова</span> и <span class="text-blue-400 font-medium">ПЦР-панели</span> для аквакультуры
               </p>
             </div>
           </div>
@@ -111,8 +111,8 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Опыта в генетике
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
-                Genotek, Сеченовский Университет, ИБГ РАН, ЦРО «Интеграция»
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+                <span class="text-purple-400 font-medium">Genotek</span>, <span class="text-purple-400 font-medium">Сеченовский Университет</span>, <span class="text-purple-400 font-medium">ИБГ РАН</span>, <span class="text-purple-400 font-medium">ЦРО «Интеграция»</span>
               </p>
             </div>
           </div>
@@ -142,8 +142,8 @@ import imgStudents from './assets/images/photo_42.webp'
               <h3 class="text-base font-semibold text-slate-100 mb-1">
                 Победителей олимпиад
               </h3>
-              <p class="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
-                Подготовка учеников ВсОШ, «Большие вызовы», НТО
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal opacity-90">
+                Подготовка учеников <span class="text-amber-400 font-medium">ВсОШ</span>, <span class="text-amber-400 font-medium">«Большие вызовы»</span>, <span class="text-amber-400 font-medium">НТО</span>
               </p>
             </div>
           </div>

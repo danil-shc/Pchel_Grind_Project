@@ -30,7 +30,7 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
                   Стартап & ML-моделирование (2024–2025)
                 </span>
               </div>
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-black mb-3 text-white group-hover:text-emerald-400 transition-colors">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-black mb-3 text-white">
                 RARE-ID — Платформа диагностики орфанных заболеваний
               </h3>
               <p class="text-sm sm:text-base text-slate-300 leading-relaxed mb-4">
@@ -57,7 +57,7 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
         <!-- Нижние две карточки: Патенты + Публикации -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Карточка 2: Патенты -->
-          <div class="reveal-item delay-200 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-6 rounded-2xl sm:rounded-3xl hover:border-emerald-500/40 transition-all duration-300">
+          <div class="reveal-item delay-200 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-6 rounded-2xl sm:rounded-3xl hover:border-amber-500/40 transition-all duration-300">
             <div class="w-12 h-12 rounded-xl bg-linear-to-br from-amber-500/20 to-orange-500/20 border border-amber-500/30 flex items-center justify-center mb-5">
               <Award :size="24" class="text-amber-400" />
             </div>
@@ -89,7 +89,7 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
           </div>
 
           <!-- Карточка 3: Публикации & ORCID -->
-          <div class="reveal-item delay-300 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-6 rounded-2xl sm:rounded-3xl hover:border-emerald-500/40 transition-all duration-300 flex flex-col">
+          <div class="reveal-item delay-300 bg-slate-900/50 backdrop-blur-md border border-slate-800 p-6 rounded-2xl sm:rounded-3xl hover:border-violet-500/40 transition-all duration-300 flex flex-col">
             <div class="w-12 h-12 rounded-xl bg-linear-to-br from-violet-500/20 to-purple-500/20 border border-violet-500/30 flex items-center justify-center mb-5">
               <FileText :size="24" class="text-violet-400" />
             </div>
@@ -101,12 +101,12 @@ import { Rocket, FileText, Award, ExternalLink, ShieldCheck } from 'lucide-vue-n
               href="https://orcid.org/0000-0002-3878-8265" 
               target="_blank" 
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-linear-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/30 hover:border-emerald-400/60 hover:from-emerald-500/20 hover:to-cyan-500/20 transition-all duration-300 group/link"
+              class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-linear-to-r from-violet-500/10 to-purple-500/10 border border-violet-500/30 hover:border-violet-400/60 hover:from-violet-500/20 hover:to-purple-500/20 transition-all duration-300 group/link"
             >
-              <span class="text-sm font-bold text-emerald-400 group-hover/link:text-emerald-300">
+              <span class="text-sm font-bold text-violet-400 group-hover/link:text-violet-300">
                 ORCID: 0000-0002-3878-8265
               </span>
-              <ExternalLink :size="16" class="text-emerald-400 group-hover/link:text-emerald-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+              <ExternalLink :size="16" class="text-violet-400 group-hover/link:text-violet-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
             </a>
           </div>
         </div>
