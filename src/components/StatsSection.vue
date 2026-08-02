@@ -32,7 +32,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgPubs" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
@@ -63,7 +63,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgPatents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
@@ -94,7 +94,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgExp" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
@@ -125,7 +125,7 @@ import imgStudents from './assets/images/photo_42.webp'
             <img :src="imgStudents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/85 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
