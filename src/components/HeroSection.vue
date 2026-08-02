@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { User, Send, BookOpen } from 'lucide-vue-next'
 import TheHeader from './TheHeader.vue'
 
@@ -7,6 +7,8 @@ import TheHeader from './TheHeader.vue'
 import photo2 from '@/components/assets/images/photo_2.webp'
 import photo10 from '@/components/assets/images/photo_10.webp'
 import photo40 from '@/components/assets/images/photo_40.webp'
+
+const SLIDE_DURATION_MS = 5000
 
 const slides = [
   {
@@ -26,39 +28,72 @@ const slides = [
 
 const isDark = defineModel('isDark', { type: Boolean, default: false })
 
-// Логика слайдера
 const currentIndex = ref(0)
 const isPaused = ref(false)
-let timer = null
+const progressKey = ref(0)
+const supportsHoverPause = ref(false)
 
-const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % slides.length
+let slideTimer = null
+let slideStartedAt = 0
+let remainingMs = SLIDE_DURATION_MS
+
+const clearSlideTimer = () => {
+  if (slideTimer !== null) {
+    clearTimeout(slideTimer)
+    slideTimer = null
+  }
 }
 
-const goToSlide = (index) => {
-  currentIndex.value = index
-  resetTimer()
-}
-
-const startTimer = () => {
-  if (timer) clearInterval(timer)
-  timer = setInterval(() => {
+const scheduleSlideAdvance = (delay = SLIDE_DURATION_MS) => {
+  clearSlideTimer()
+  remainingMs = delay
+  slideStartedAt = Date.now()
+  slideTimer = window.setTimeout(() => {
     if (!isPaused.value) {
       nextSlide()
     }
-  }, 5000)
+  }, delay)
 }
 
-const resetTimer = () => {
-  startTimer()
+const nextSlide = () => {
+  currentIndex.value = (currentIndex.value + 1) % slides.length
+  progressKey.value++
 }
+
+const goToSlide = (index) => {
+  if (index === currentIndex.value) {
+    progressKey.value++
+    return
+  }
+  currentIndex.value = index
+  progressKey.value++
+}
+
+const pauseSlider = () => {
+  if (!supportsHoverPause.value || isPaused.value) return
+  isPaused.value = true
+  clearSlideTimer()
+  const elapsed = Date.now() - slideStartedAt
+  remainingMs = Math.max(0, remainingMs - elapsed)
+}
+
+const resumeSlider = () => {
+  if (!supportsHoverPause.value || !isPaused.value) return
+  isPaused.value = false
+  scheduleSlideAdvance(remainingMs)
+}
+
+watch([currentIndex, progressKey], () => {
+  scheduleSlideAdvance(SLIDE_DURATION_MS)
+})
 
 onMounted(() => {
-  startTimer()
+  supportsHoverPause.value = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  scheduleSlideAdvance(SLIDE_DURATION_MS)
 })
 
 onUnmounted(() => {
-  if (timer) clearInterval(timer)
+  clearSlideTimer()
 })
 
 const scrollToNext = () => {
@@ -86,22 +121,22 @@ const scrollToNext = () => {
 
           <!-- Бейдж "ОБО МНЕ" -->
           <span
-            class="absolute top-4 left-4 z-20 w-fit h-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 backdrop-blur-md uppercase tracking-wider">
+            class="absolute top-12 sm:top-4 left-3 sm:left-4 z-30 w-fit h-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 backdrop-blur-md uppercase tracking-wider">
             <User :size="12" />Обо мне
           </span>
 
           <!-- Фотография как фоновый слой (слайдер) -->
           <div
             class="absolute inset-0 w-full h-full overflow-hidden z-0 md:relative md:w-1/2 md:border-l md:border-slate-100 md:dark:border-slate-800/50"
-            @mouseenter="isPaused = true"
-            @mouseleave="isPaused = false">
+            @mouseenter="pauseSlider"
+            @mouseleave="resumeSlider">
             
             <!-- Слайды с Cross-Fade и Ken Burns эффектом -->
             <div
               v-for="(slide, index) in slides"
               :key="index"
-              class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out"
-              :class="currentIndex === index ? 'opacity-100 z-10' : 'opacity-0 z-0'">
+              class="absolute inset-0 w-full h-full transition-opacity duration-700 ease-in-out z-0"
+              :class="currentIndex === index ? 'opacity-100' : 'opacity-0'">
               <img
                 :src="slide.src"
                 alt="Михаил Игоревич Пчелинцев"
@@ -112,32 +147,40 @@ const scrollToNext = () => {
                 ]" />
             </div>
 
-            <!-- Индикаторы прогресса -->
-            <div class="absolute bottom-4 left-4 right-4 z-20 flex gap-2">
+            <!-- Индикаторы прогресса: вверху на мобилке, внизу на десктопе -->
+            <div class="absolute top-3 left-3 right-3 z-30 flex gap-1.5 sm:top-auto sm:bottom-3 sm:gap-2">
               <div
                 v-for="(_, index) in slides"
                 :key="index"
                 @click="goToSlide(index)"
-                class="h-1 rounded-full bg-slate-900/60 backdrop-blur-md overflow-hidden flex-1 cursor-pointer transition-all duration-300 hover:bg-slate-900/80">
+                class="h-1 rounded-full bg-white/30 backdrop-blur-sm overflow-hidden flex-1 cursor-pointer transition-colors duration-300 hover:bg-white/50">
                 <div
-                  class="h-full bg-emerald-500 transition-all ease-linear"
-                  :style="{
-                    width: currentIndex === index && !isPaused ? '100%' : currentIndex > index ? '100%' : '0%',
-                    transitionDuration: currentIndex === index && !isPaused ? '5000ms' : '300ms'
-                  }">
-                </div>
+                  v-if="index < currentIndex"
+                  class="h-full w-full bg-emerald-400"
+                />
+                <div
+                  v-else-if="index === currentIndex"
+                  :key="`progress-${currentIndex}-${progressKey}`"
+                  class="slide-progress-fill h-full bg-emerald-400"
+                  :class="{ 'slide-progress-fill--paused': isPaused }"
+                  :style="{ animationDuration: `${SLIDE_DURATION_MS}ms` }"
+                />
+                <div
+                  v-else
+                  class="h-full w-0 bg-emerald-400"
+                />
               </div>
             </div>
           </div>
 
-          <!-- Текстовый блок внизу с градиентом -->
-          <div
-            class="relative z-10 mt-auto w-full p-4 sm:p-5 md:p-6 lg:p-8 md:mt-0 md:max-w-[50%] flex flex-col md:justify-between md:bg-white md:dark:bg-[#0d131f] pointer-events-none">
-            
-            <!-- Градиент для мобильных устройств -->
-            <div class="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-[#0d131f] via-[#0d131f]/90 to-transparent pt-12 -mx-4 -mb-4 sm:-mx-5 sm:-mb-5 md:hidden"></div>
+          <!-- Градиентная подложка для текста (только мобилка) -->
+          <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-[#0d131f] via-[#0d131f]/40 to-transparent pointer-events-none z-10 md:hidden"></div>
 
-            <div class="relative z-10 pointer-events-auto md:order-1">
+          <!-- Текстовый блок внизу -->
+          <div
+            class="relative z-20 mt-auto w-full p-4 sm:p-5 md:p-6 lg:p-8 md:mt-0 md:max-w-[50%] flex flex-col md:justify-between md:bg-white md:dark:bg-[#0d131f] pointer-events-none">
+
+            <div class="relative pointer-events-auto md:order-1">
               <h2
                 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight text-white md:text-slate-900 md:dark:text-white drop-shadow-md md:drop-shadow-none">
                 Пчелинцев <br class="hidden sm:inline"> Михаил Игоревич
@@ -145,7 +188,7 @@ const scrollToNext = () => {
             </div>
 
             <div
-              class="relative z-10 text-white md:text-slate-700 md:dark:text-slate-300 text-xs sm:text-sm font-medium mt-3 md:mt-4 max-w-full drop-shadow-md md:drop-shadow-none pointer-events-auto space-y-1.5 leading-relaxed md:order-2">
+              class="relative text-white md:text-slate-700 md:dark:text-slate-300 text-xs sm:text-sm font-medium mt-3 md:mt-4 max-w-full drop-shadow-md md:drop-shadow-none pointer-events-auto space-y-1.5 leading-relaxed md:order-2">
               <div class="flex items-start gap-2.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
                 <span class="leading-snug">Стажер-исследователь <span class="font-semibold text-emerald-400 md:text-emerald-500">Первого МГМУ им. И. М. Сеченова</span></span>
@@ -215,3 +258,28 @@ const scrollToNext = () => {
     </div>
   </section>
 </template>
+
+<style scoped>
+@keyframes slide-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.slide-progress-fill {
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation-name: slide-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  will-change: transform;
+}
+
+.slide-progress-fill--paused {
+  animation-play-state: paused;
+}
+</style>
