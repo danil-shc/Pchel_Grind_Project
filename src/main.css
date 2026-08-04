@@ -24,39 +24,50 @@
   }
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
-
-/* Плавное перетекание цветов при смене темы.
-   :where() держит нулевую специфичность, поэтому любые transition-утилиты Tailwind
-   на самом элементе имеют приоритет и не ломаются. */
-@media (prefers-reduced-motion: no-preference) {
-  :where(.theme-root, .theme-root *) {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+/* Важно: всё, что не должно "перебивать" transition-утилиты Tailwind
+   (transition-opacity, transition-transform, duration-*, group-hover:scale-*, и т.д.),
+   должно жить внутри @layer base. Tailwind v4 оборачивает все свои утилиты в
+   @layer utilities, а этот слой объявлен ПОСЛЕ base — поэтому utilities всегда
+   выигрывают у base независимо от специфичности. Но неслоированный (layer-less)
+   CSS в каскаде всегда выигрывает у ЛЮБОГО слоя, независимо от специфичности и
+   :where() — именно из-за этого пропадала плавность фейда и zoom-эффектов на
+   Bento-карточках: transition-property из правил ниже "затирал" opacity/transform
+   из Tailwind-утилит, и анимация происходила мгновенно (рывком). */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
-}
 
-/* Состояние ожидания скролла */
-.reveal-item {
-  opacity: 0;
-  transform: translateY(25px);
-  will-change: transform, opacity;
-  /* Этот транзишен отвечает ТОЛЬКО за красивый въезд при скролле */
-  transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), 
-              transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
-}
+  /* Плавное перетекание цветов при смене темы.
+     :where() держит нулевую специфичность, поэтому любые transition-утилиты Tailwind
+     на самом элементе имеют приоритет и не ломаются. */
+  @media (prefers-reduced-motion: no-preference) {
+    :where(.theme-root, .theme-root *) {
+      transition-property: background-color, border-color, color, fill, stroke;
+      transition-duration: 300ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
 
-/* Активация */
-.reveal-item.active {
-  opacity: 1;
-  transform: translateY(0);
+  /* Состояние ожидания скролла */
+  .reveal-item {
+    opacity: 0;
+    transform: translateY(25px);
+    will-change: transform, opacity;
+    /* Этот транзишен отвечает ТОЛЬКО за красивый въезд при скролле */
+    transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* Активация */
+  .reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

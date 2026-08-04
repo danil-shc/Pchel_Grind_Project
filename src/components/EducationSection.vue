@@ -7,6 +7,8 @@ import imgRsosh from './assets/images/photo_25.webp'
 import imgVsosh from './assets/images/photo_46.webp'
 import imgChallenges from './assets/images/photo_45.webp'
 import imgMedicine from './assets/images/photo_22.webp'
+import logoSechenov from '@/components/assets/logos/sechenov.png'
+import logoSirius from '@/components/assets/logos/sirius.png'
 </script>
 
 <template>
@@ -95,6 +97,22 @@ import imgMedicine from './assets/images/photo_22.webp'
               </div>
 
             </div>
+
+            <!-- Нижняя плашка с логотипами -->
+            <div class="mt-8 pt-5 border-t border-white/10">
+              <div class="flex items-center justify-around gap-4 rounded-xl bg-white/[0.02] p-4 border border-white/5 backdrop-blur-sm">
+                <img 
+                  :src="logoSechenov" 
+                  class="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-90 transition-opacity hover:opacity-100" 
+                  alt="Сеченовский Университет" 
+                />
+                <img 
+                  :src="logoSirius" 
+                  class="h-7 sm:h-8 w-auto object-contain brightness-0 invert opacity-85 transition-opacity hover:opacity-100" 
+                  alt="ОЦ Сириус" 
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -117,7 +135,7 @@ import imgMedicine from './assets/images/photo_22.webp'
               <img
                 :src="imgMentorship"
                 alt="Наставничество"
-                class="absolute inset-0 h-full w-full object-cover object-[center_70%] md:object-[center_62%] lg:object-[center_70%] dark:opacity-70 dark:brightness-105 group-hover:scale-105 transition-transform duration-500" />
+                class="absolute inset-0 h-full w-full object-cover object-[center_70%] md:object-[center_62%] lg:object-[center_70%] dark:opacity-70 dark:brightness-105 transition-transform duration-700 ease-out group-hover:scale-105" />
               <div class="absolute inset-0 bg-linear-to-r from-slate-50/45 via-slate-50/10 to-transparent dark:from-slate-950/75 dark:via-slate-950/50 dark:to-slate-950/30 z-10"></div>
 
               <ul class="relative z-20 space-y-3">
@@ -156,7 +174,7 @@ import imgMedicine from './assets/images/photo_22.webp'
                 <img
                   :src="imgRsosh"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
                 <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
@@ -173,7 +191,7 @@ import imgMedicine from './assets/images/photo_22.webp'
                 <img
                   :src="imgVsosh"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
                 <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
@@ -190,7 +208,7 @@ import imgMedicine from './assets/images/photo_22.webp'
                 <img
                   :src="imgChallenges"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
                 <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
@@ -207,7 +225,7 @@ import imgMedicine from './assets/images/photo_22.webp'
                 <img
                   :src="imgMedicine"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
                 <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">

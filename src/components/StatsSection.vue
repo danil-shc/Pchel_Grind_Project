@@ -29,7 +29,7 @@ import imgStudents from './assets/images/photo_42.webp'
         <div class="reveal-item delay-100 h-full">
           <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
-            <img :src="imgPubs" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+            <img :src="imgPubs" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
             <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
@@ -60,7 +60,7 @@ import imgStudents from './assets/images/photo_42.webp'
         <div class="reveal-item delay-200 h-full">
           <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
-            <img :src="imgPatents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+            <img :src="imgPatents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
             <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
@@ -91,7 +91,7 @@ import imgStudents from './assets/images/photo_42.webp'
         <div class="reveal-item delay-300 h-full">
           <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
-            <img :src="imgExp" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+            <img :src="imgExp" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
             <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
@@ -122,7 +122,7 @@ import imgStudents from './assets/images/photo_42.webp'
         <div class="reveal-item delay-400 h-full">
           <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
-            <img :src="imgStudents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
+            <img :src="imgStudents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
             <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>

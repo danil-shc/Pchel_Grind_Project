@@ -1,12 +1,18 @@
 <script setup>
-import { ref, onMounted, onUnmounted, watch } from 'vue'
-import { User, Send, BookOpen } from 'lucide-vue-next'
+import { ref, onMounted } from 'vue'
+import { User } from 'lucide-vue-next'
 import TheHeader from './TheHeader.vue'
+import { useAutoSlider } from '@/composables/useAutoSlider'
 
 // Изображения для слайдера
 import photo2 from '@/components/assets/images/photo_2.webp'
 import photo10 from '@/components/assets/images/photo_10.webp'
 import photo40 from '@/components/assets/images/photo_40.webp'
+
+// Логотипы для карточки "Образование"
+import sechenovLogo from '@/components/assets/logos/sechenov.png'
+import genotekLogo from '@/components/assets/logos/genotek.png'
+import siriusLogo from '@/components/assets/logos/sirius.png'
 
 const SLIDE_DURATION_MS = 5000
 
@@ -28,9 +34,17 @@ const slides = [
 
 const isDark = defineModel('isDark', { type: Boolean, default: false })
 
-const currentIndex = ref(0)
-const isPaused = ref(false)
-const progressKey = ref(0)
+const {
+  currentIndex,
+  isPaused,
+  progressKey,
+  next: nextSlide,
+  prev: prevSlide,
+  goTo: goToSlide,
+  pause: pauseSliderTimer,
+  resume: resumeSliderTimer
+} = useAutoSlider(slides.length, SLIDE_DURATION_MS)
+
 const supportsHoverPause = ref(false)
 const supportsTouchNavigation = ref(false)
 
@@ -41,59 +55,14 @@ let touchStartX = 0
 let touchStartY = 0
 let touchActive = false
 
-let slideTimer = null
-let slideStartedAt = 0
-let remainingMs = SLIDE_DURATION_MS
-
-const clearSlideTimer = () => {
-  if (slideTimer !== null) {
-    clearTimeout(slideTimer)
-    slideTimer = null
-  }
-}
-
-const scheduleSlideAdvance = (delay = SLIDE_DURATION_MS) => {
-  clearSlideTimer()
-  remainingMs = delay
-  slideStartedAt = Date.now()
-  slideTimer = window.setTimeout(() => {
-    if (!isPaused.value) {
-      nextSlide()
-    }
-  }, delay)
-}
-
-const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % slides.length
-  progressKey.value++
-}
-
-const prevSlide = () => {
-  currentIndex.value = (currentIndex.value - 1 + slides.length) % slides.length
-  progressKey.value++
-}
-
-const goToSlide = (index) => {
-  if (index === currentIndex.value) {
-    progressKey.value++
-    return
-  }
-  currentIndex.value = index
-  progressKey.value++
-}
-
 const pauseSlider = () => {
-  if (!supportsHoverPause.value || isPaused.value) return
-  isPaused.value = true
-  clearSlideTimer()
-  const elapsed = Date.now() - slideStartedAt
-  remainingMs = Math.max(0, remainingMs - elapsed)
+  if (!supportsHoverPause.value) return
+  pauseSliderTimer()
 }
 
 const resumeSlider = () => {
-  if (!supportsHoverPause.value || !isPaused.value) return
-  isPaused.value = false
-  scheduleSlideAdvance(remainingMs)
+  if (!supportsHoverPause.value) return
+  resumeSliderTimer()
 }
 
 const isProgressBarTarget = (target) => {
@@ -132,26 +101,48 @@ const onTouchCancel = () => {
   touchActive = false
 }
 
-watch([currentIndex, progressKey], () => {
-  scheduleSlideAdvance(SLIDE_DURATION_MS)
-})
-
 onMounted(() => {
   const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)')
   const touchLayoutQuery = window.matchMedia('(max-width: 1023px)')
 
   supportsHoverPause.value = finePointerQuery.matches
   supportsTouchNavigation.value = touchLayoutQuery.matches || !finePointerQuery.matches
-  scheduleSlideAdvance(SLIDE_DURATION_MS)
-})
-
-onUnmounted(() => {
-  clearSlideTimer()
 })
 
 const scrollToNext = () => {
   document.querySelector('#stats')?.scrollIntoView({ behavior: 'smooth' })
 }
+
+// Слайдер логотипов в карточке "Образование" (планшет/мобилка) —
+// переиспользует ту же логику автопереключения, что и фото-слайдер выше.
+const LOGO_SLIDE_DURATION_MS = 3000
+
+const logos = [
+  {
+    src: sechenovLogo,
+    alt: 'Сеченовский Университет',
+    // Логотип вертикальный с мелким текстом под гербом — увеличенная высота
+    // и contrast-125 нужны, чтобы детали оставались читаемыми в слайдере.
+    class: 'h-20 sm:h-24 md:h-28 w-auto object-contain brightness-0 invert contrast-125 opacity-90'
+  },
+  {
+    src: genotekLogo,
+    alt: 'Genotek',
+    class: 'h-8 sm:h-10 md:h-11 w-auto object-contain brightness-0 invert opacity-90'
+  },
+  {
+    src: siriusLogo,
+    alt: 'Сириус',
+    class: 'h-9 sm:h-11 md:h-12 w-auto object-contain brightness-0 invert opacity-90'
+  }
+]
+
+const {
+  currentIndex: activeLogoIndex,
+  goTo: goToLogoSlide,
+  pause: pauseLogoSlider,
+  resume: resumeLogoSlider
+} = useAutoSlider(logos.length, LOGO_SLIDE_DURATION_MS)
 </script>
 
 <template>
@@ -177,7 +168,7 @@ const scrollToNext = () => {
 
           <!-- Бейдж "ОБО МНЕ" -->
           <span
-            class="absolute top-12 sm:top-4 left-3 sm:left-4 z-30 w-fit h-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/85 dark:bg-emerald-950/80 border border-emerald-500/40 text-emerald-700 dark:text-emerald-400 backdrop-blur-md uppercase tracking-wider">
+            class="absolute top-12 sm:top-6 left-3 sm:left-4 z-30 w-fit h-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/85 dark:bg-emerald-950/80 border border-emerald-500/40 text-emerald-700 dark:text-emerald-400 backdrop-blur-md uppercase tracking-wider">
             <User :size="12" />Обо мне
           </span>
 
@@ -268,34 +259,71 @@ const scrollToNext = () => {
           </div>
         </div>
 
-        <div class="flex flex-row md:flex-col gap-3 sm:gap-4 md:gap-5 shrink-0 h-28 sm:h-32 md:h-full md:min-h-0 md:shrink md:flex-1">
-          <div
-            class="flex-1 min-h-0 min-w-0 rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 md:p-6 bg-white dark:bg-[#0d131f] border border-slate-200/60 dark:border-slate-800/80 shadow-sm flex flex-col justify-between hover:border-sky-500/50 transition-all duration-300 cursor-pointer group hover:shadow-md">
-            <div class="flex justify-between items-start gap-2">
-              <div
-                class="p-2 sm:p-2.5 rounded-2xl bg-sky-500/10 text-sky-500 transition-transform duration-300 ease-in-out will-change-transform transform-gpu group-hover:scale-110">
-                <Send :size="18" class="sm:w-5 sm:h-5" />
-              </div>
-              <span class="text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-600 dark:text-sky-400 shrink-0">Блог</span>
+        <div
+          class="min-h-[160px] sm:min-h-[180px] md:min-h-0 md:h-full shrink-0 md:shrink relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-[#0B1120] px-3.5 sm:px-5 lg:px-8 pb-3.5 sm:pb-5 lg:pb-8 pt-3.5 sm:pt-6 lg:pt-8 flex flex-col justify-between group hover:border-white/30 hover:bg-white/[0.02] transition-all duration-300 shadow-2xl"
+          @mouseenter="pauseLogoSlider"
+          @mouseleave="resumeLogoSlider">
+
+          <!-- Плашка "Образование" (на ПК — абсолютно, чтобы не занимать высоту композиции) -->
+          <div class="flex lg:contents justify-end items-center w-full shrink-0">
+            <span class="lg:absolute lg:top-8 lg:right-8 lg:z-10 px-3 py-1 text-xs font-medium text-white/90 bg-white/10 border border-white/20 rounded-full backdrop-blur-md shadow-sm">
+              Образование
+            </span>
+          </div>
+
+          <!-- Desktop (lg и выше): компактный вертикальный ряд по центру, гарантированно вмещается по высоте -->
+          <div class="hidden lg:flex flex-col items-center justify-center my-auto gap-6 xl:gap-8 w-full">
+            <!-- Сеченовский Университет -->
+            <div class="flex items-center justify-center w-full">
+              <img
+                :src="sechenovLogo"
+                class="h-12 xl:h-14 w-auto object-contain brightness-0 invert opacity-95 contrast-125 hover:opacity-100 transition-opacity"
+                alt="Сеченовский Университет" />
             </div>
-            <div>
-              <h3 class="font-bold text-base sm:text-lg md:text-xl text-slate-900 dark:text-white mb-0.5 sm:mb-1">Telegram Канал</h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-2 hidden sm:block leading-relaxed">Фотки, мысли, заметки с кафедры.</p>
+
+            <div class="w-16 xl:w-20 h-[1px] bg-white/10"></div>
+
+            <!-- Genotek -->
+            <div class="flex items-center justify-center w-full">
+              <img
+                :src="genotekLogo"
+                class="h-7 xl:h-8 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                alt="Genotek" />
+            </div>
+
+            <div class="w-16 xl:w-20 h-[1px] bg-white/10"></div>
+
+            <!-- Сириус -->
+            <div class="flex items-center justify-center w-full">
+              <img
+                :src="siriusLogo"
+                class="h-8 xl:h-9 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                alt="Сириус" />
             </div>
           </div>
 
-          <div
-            class="flex-1 min-h-0 min-w-0 rounded-2xl sm:rounded-3xl p-3.5 sm:p-5 md:p-6 bg-white dark:bg-[#0d131f] border border-slate-200/60 dark:border-slate-800/80 shadow-sm flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 cursor-pointer group hover:shadow-md">
-            <div class="flex justify-between items-start gap-2">
-              <div
-                class="p-2 sm:p-2.5 rounded-2xl bg-emerald-500/10 text-emerald-500 transition-transform duration-300 ease-in-out will-change-transform transform-gpu group-hover:scale-110">
-                <BookOpen :size="18" class="sm:w-5 sm:h-5" />
-              </div>
-              <span class="text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">Scopus / ВАК</span>
+          <!-- Планшет и мобилка (< lg): слайдер логотипов -->
+          <div class="flex lg:hidden flex-1 min-h-0 flex-col justify-between w-full">
+            <div class="relative flex-1 min-h-0 flex items-center justify-center">
+              <transition name="logo-fade" mode="out-in">
+                <img
+                  :key="activeLogoIndex"
+                  :src="logos[activeLogoIndex].src"
+                  :class="logos[activeLogoIndex].class"
+                  :alt="logos[activeLogoIndex].alt" />
+              </transition>
             </div>
-            <div>
-              <h3 class="font-bold text-base sm:text-lg md:text-xl text-slate-900 dark:text-white mb-0.5 sm:mb-1">Публикации</h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 line-clamp-2 hidden sm:block leading-relaxed">Список научных статей.</p>
+
+            <!-- Лампово-белые полосы прогресса снизу -->
+            <div class="flex gap-2 mt-3 w-full shrink-0">
+              <button
+                v-for="(logo, idx) in logos"
+                :key="idx"
+                type="button"
+                :aria-label="`Логотип ${idx + 1}`"
+                @click="goToLogoSlide(idx)"
+                class="h-1 flex-1 rounded-full cursor-pointer transition-all duration-300"
+                :class="activeLogoIndex === idx ? 'bg-white/90 shadow-[0_0_8px_rgba(255,255,255,0.5)]' : 'bg-white/20'"></button>
             </div>
           </div>
         </div>
@@ -344,5 +372,15 @@ const scrollToNext = () => {
 
 .slide-progress-fill--paused {
   animation-play-state: paused;
+}
+
+.logo-fade-enter-active,
+.logo-fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+
+.logo-fade-enter-from,
+.logo-fade-leave-to {
+  opacity: 0;
 }
 </style>
