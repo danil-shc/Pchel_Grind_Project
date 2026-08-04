@@ -32,6 +32,14 @@ const currentIndex = ref(0)
 const isPaused = ref(false)
 const progressKey = ref(0)
 const supportsHoverPause = ref(false)
+const supportsTouchNavigation = ref(false)
+
+const SWIPE_THRESHOLD_PX = 40
+const SWIPE_MAX_ANGLE_RATIO = 1.5
+
+let touchStartX = 0
+let touchStartY = 0
+let touchActive = false
 
 let slideTimer = null
 let slideStartedAt = 0
@@ -60,6 +68,11 @@ const nextSlide = () => {
   progressKey.value++
 }
 
+const prevSlide = () => {
+  currentIndex.value = (currentIndex.value - 1 + slides.length) % slides.length
+  progressKey.value++
+}
+
 const goToSlide = (index) => {
   if (index === currentIndex.value) {
     progressKey.value++
@@ -83,12 +96,52 @@ const resumeSlider = () => {
   scheduleSlideAdvance(remainingMs)
 }
 
+const isProgressBarTarget = (target) => {
+  return target instanceof Element && target.closest('[data-slide-progress]')
+}
+
+const onTouchStart = (event) => {
+  if (!supportsTouchNavigation.value || isProgressBarTarget(event.target)) return
+
+  const touch = event.touches[0]
+  touchStartX = touch.clientX
+  touchStartY = touch.clientY
+  touchActive = true
+}
+
+const onTouchEnd = (event) => {
+  if (!touchActive) return
+  touchActive = false
+
+  const touch = event.changedTouches[0]
+  const deltaX = touch.clientX - touchStartX
+  const deltaY = touch.clientY - touchStartY
+  const absX = Math.abs(deltaX)
+  const absY = Math.abs(deltaY)
+
+  if (absX < SWIPE_THRESHOLD_PX || absY > absX * SWIPE_MAX_ANGLE_RATIO) return
+
+  if (deltaX < 0) {
+    nextSlide()
+  } else {
+    prevSlide()
+  }
+}
+
+const onTouchCancel = () => {
+  touchActive = false
+}
+
 watch([currentIndex, progressKey], () => {
   scheduleSlideAdvance(SLIDE_DURATION_MS)
 })
 
 onMounted(() => {
-  supportsHoverPause.value = window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)')
+  const touchLayoutQuery = window.matchMedia('(max-width: 1023px)')
+
+  supportsHoverPause.value = finePointerQuery.matches
+  supportsTouchNavigation.value = touchLayoutQuery.matches || !finePointerQuery.matches
   scheduleSlideAdvance(SLIDE_DURATION_MS)
 })
 
@@ -117,7 +170,10 @@ const scrollToNext = () => {
 
       <div class="flex-1 min-h-0 flex flex-col md:grid md:grid-cols-3 gap-3 sm:gap-4 md:gap-5">
         <div
-          class="min-h-[320px] sm:min-h-[360px] md:min-h-0 md:col-span-2 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0d131f] border border-slate-200/60 dark:border-slate-800/80 shadow-sm overflow-hidden relative flex flex-col justify-between md:flex-row transition-all duration-300 hover:shadow-lg hover:border-emerald-500/20 group w-full h-full">
+          class="min-h-[320px] sm:min-h-[360px] md:min-h-0 md:col-span-2 rounded-2xl sm:rounded-3xl bg-white dark:bg-[#0d131f] border border-slate-200/60 dark:border-slate-800/80 shadow-sm overflow-hidden relative flex flex-col justify-between md:flex-row transition-all duration-300 hover:shadow-lg hover:border-emerald-500/20 group w-full h-full touch-pan-y"
+          @touchstart.passive="onTouchStart"
+          @touchend="onTouchEnd"
+          @touchcancel="onTouchCancel">
 
           <!-- Бейдж "ОБО МНЕ" -->
           <span
@@ -148,28 +204,35 @@ const scrollToNext = () => {
             </div>
 
             <!-- Индикаторы прогресса: вверху на мобилке, внизу на десктопе -->
-            <div class="absolute top-3 left-3 right-3 z-30 flex gap-1.5 sm:top-auto sm:bottom-3 sm:gap-2">
-              <div
+            <div
+              data-slide-progress
+              class="absolute top-3 left-3 right-3 z-30 flex gap-1.5 sm:top-auto sm:bottom-3 sm:gap-2">
+              <button
                 v-for="(_, index) in slides"
                 :key="index"
-                @click="goToSlide(index)"
-                class="h-1 rounded-full bg-white/30 backdrop-blur-sm overflow-hidden flex-1 cursor-pointer transition-colors duration-300 hover:bg-white/50">
-                <div
-                  v-if="index < currentIndex"
-                  class="h-full w-full bg-emerald-400"
-                />
-                <div
-                  v-else-if="index === currentIndex"
-                  :key="`progress-${currentIndex}-${progressKey}`"
-                  class="slide-progress-fill h-full bg-emerald-400"
-                  :class="{ 'slide-progress-fill--paused': isPaused }"
-                  :style="{ animationDuration: `${SLIDE_DURATION_MS}ms` }"
-                />
-                <div
-                  v-else
-                  class="h-full w-0 bg-emerald-400"
-                />
-              </div>
+                type="button"
+                :aria-label="`Слайд ${index + 1}`"
+                @click.stop="goToSlide(index)"
+                class="group/progress relative flex-1 cursor-pointer touch-manipulation py-2 -my-2">
+                <span
+                  class="block h-1 rounded-full bg-white/30 backdrop-blur-sm overflow-hidden transition-colors duration-300 group-hover/progress:bg-white/50 group-active/progress:bg-white/60">
+                  <span
+                    v-if="index < currentIndex"
+                    class="block h-full w-full bg-emerald-400"
+                  />
+                  <span
+                    v-else-if="index === currentIndex"
+                    :key="`progress-${currentIndex}-${progressKey}`"
+                    class="slide-progress-fill block h-full bg-emerald-400"
+                    :class="{ 'slide-progress-fill--paused': isPaused }"
+                    :style="{ animationDuration: `${SLIDE_DURATION_MS}ms` }"
+                  />
+                  <span
+                    v-else
+                    class="block h-full w-0 bg-emerald-400"
+                  />
+                </span>
+              </button>
             </div>
           </div>
 
