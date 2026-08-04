@@ -34,6 +34,17 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
+/* Плавное перетекание цветов при смене темы.
+   :where() держит нулевую специфичность, поэтому любые transition-утилиты Tailwind
+   на самом элементе имеют приоритет и не ломаются. */
+@media (prefers-reduced-motion: no-preference) {
+  :where(.theme-root, .theme-root *) {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
 /* Состояние ожидания скролла */
 .reveal-item {
   opacity: 0;

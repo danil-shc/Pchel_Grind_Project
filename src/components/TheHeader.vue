@@ -8,10 +8,10 @@ const isDark = defineModel('isDark', { type: Boolean, default: false })
   <header class="shrink-0 w-full">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-2.5 sm:py-4 flex items-center justify-between gap-3 border-b border-slate-200/50 dark:border-slate-800/50 relative z-50">
     <div class="flex flex-col min-w-0 flex-1">
-      <span class="text-sm sm:text-base md:text-lg font-bold text-white">
+      <span class="text-sm sm:text-base md:text-lg font-bold text-slate-900 dark:text-white">
         Пчелинцев М.И.
       </span>
-      <span class="text-[10px] sm:text-xs text-slate-400 tracking-wide font-medium uppercase mt-0.5">
+      <span class="text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 tracking-wide font-medium uppercase mt-0.5">
         Первый МГМУ им. И.М. Сеченова
       </span>
     </div>

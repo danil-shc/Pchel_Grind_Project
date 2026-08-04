@@ -15,13 +15,13 @@ import imgMedicine from './assets/images/photo_22.webp'
       
       <!-- Заголовок секции -->
       <div class="mb-8 sm:mb-12 reveal-item">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
           Бэкграунд и Наставничество
         </span>
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 mb-4 text-slate-900 dark:text-white">
           Академическая база & Результаты
         </h2>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
           Фундаментальное медицинское образование и успехи воспитанников на всероссийском уровне.
         </p>
       </div>
@@ -31,14 +31,14 @@ import imgMedicine from './assets/images/photo_22.webp'
         
         <!-- Колонка 1: Образование & Квалификация -->
         <div class="reveal-item delay-100">
-          <div class="h-full bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 sm:p-8">
+          <div class="h-full bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none rounded-2xl p-6 sm:p-8">
             
             <!-- Заголовок колонки -->
             <div class="flex items-center gap-3 mb-6">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-500 flex items-center justify-center">
                 <GraduationCap :size="20" />
               </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
                 Образование & Квалификация
               </h3>
             </div>
@@ -50,13 +50,13 @@ import imgMedicine from './assets/images/photo_22.webp'
               <div class="relative pl-5 border-l-2 border-emerald-500/40">
                 <div class="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
                 <div>
-                  <h4 class="text-base sm:text-lg font-bold text-white mb-1">
+                  <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1">
                     Сеченовский Университет (6 курс)
                   </h4>
-                  <p class="text-emerald-400 font-medium text-sm sm:text-base mb-2">
+                  <p class="text-emerald-600 dark:text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Лечебное дело, специализация «Врач-исследователь»
                   </p>
-                  <p class="text-sm text-slate-300 leading-relaxed font-normal mt-1">
+                  <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
                     Институт клинической медицины. Профильные области: генетика, молекулярная биология, урология.
                   </p>
                 </div>
@@ -66,13 +66,13 @@ import imgMedicine from './assets/images/photo_22.webp'
               <div class="relative pl-5 border-l-2 border-emerald-500/40">
                 <div class="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
                 <div>
-                  <h4 class="text-base sm:text-lg font-bold text-white mb-1">
+                  <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1">
                     НГУ, Цифровая кафедра (2024)
                   </h4>
-                  <p class="text-emerald-400 font-medium text-sm sm:text-base mb-2">
+                  <p class="text-emerald-600 dark:text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Практическая биоинформатика и молекулярная биология
                   </p>
-                  <p class="text-sm text-slate-300 leading-relaxed font-normal mt-1">
+                  <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
                     Диплом программы «Технологии управления свойствами биологических объектов».
                   </p>
                 </div>
@@ -82,13 +82,13 @@ import imgMedicine from './assets/images/photo_22.webp'
               <div class="relative pl-5 border-l-2 border-emerald-500/40">
                 <div class="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
                 <div>
-                  <h4 class="text-base sm:text-lg font-bold text-white mb-1">
+                  <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1">
                     ОЦ «Сириус» и УрФУ (2024)
                   </h4>
-                  <p class="text-emerald-400 font-medium text-sm sm:text-base mb-2">
+                  <p class="text-emerald-600 dark:text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Повышение квалификации
                   </p>
-                  <p class="text-sm text-slate-300 leading-relaxed font-normal mt-1">
+                  <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
                     Курс по основам наставнической деятельности для работы с одарёнными школьниками.
                   </p>
                 </div>
@@ -100,48 +100,48 @@ import imgMedicine from './assets/images/photo_22.webp'
 
         <!-- Колонка 2: Результаты учеников -->
         <div class="reveal-item delay-200">
-          <div class="h-full bg-slate-900/40 backdrop-blur-md border border-slate-800/80 rounded-2xl p-6 sm:p-8">
+          <div class="h-full bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none rounded-2xl p-6 sm:p-8">
             
             <!-- Заголовок колонки -->
             <div class="flex items-center gap-3 mb-6">
-              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-500 flex items-center justify-center">
                 <Trophy :size="20" />
               </div>
-              <h3 class="text-lg sm:text-xl font-bold text-white">
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
                 Результаты учеников и команд
               </h3>
             </div>
 
             <!-- Баннер: роли и наставничество -->
-            <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900 p-5 sm:p-6 mb-6 group">
+            <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 sm:p-6 mb-6 group">
               <img
                 :src="imgMentorship"
                 alt="Наставничество"
-                class="absolute inset-0 h-full w-full object-cover object-[center_70%] md:object-[center_62%] lg:object-[center_70%] opacity-70 brightness-105 group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute inset-0 bg-linear-to-r from-slate-950/75 via-slate-950/50 to-slate-950/30 z-10"></div>
+                class="absolute inset-0 h-full w-full object-cover object-[center_70%] md:object-[center_62%] lg:object-[center_70%] dark:opacity-70 dark:brightness-105 group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-linear-to-r from-slate-50/45 via-slate-50/10 to-transparent dark:from-slate-950/75 dark:via-slate-950/50 dark:to-slate-950/30 z-10"></div>
 
               <ul class="relative z-20 space-y-3">
                 <li class="flex items-start gap-3">
-                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center">
-                    <Check :size="12" class="text-emerald-400" />
+                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-white/90 dark:bg-emerald-500/15 border border-emerald-600/60 dark:border-emerald-500/40 shadow-sm flex items-center justify-center">
+                    <Check :size="12" class="text-emerald-700 dark:text-emerald-400" />
                   </span>
-                  <span class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed">
+                  <span class="text-sm sm:text-base text-slate-900 dark:text-slate-200 font-medium leading-relaxed [text-shadow:0_1px_12px_rgba(255,255,255,0.85)] dark:[text-shadow:none]">
                     Куратор группы резерва сборной Москвы по биологии
                   </span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center">
-                    <Check :size="12" class="text-emerald-400" />
+                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-white/90 dark:bg-emerald-500/15 border border-emerald-600/60 dark:border-emerald-500/40 shadow-sm flex items-center justify-center">
+                    <Check :size="12" class="text-emerald-700 dark:text-emerald-400" />
                   </span>
-                  <span class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed">
+                  <span class="text-sm sm:text-base text-slate-900 dark:text-slate-200 font-medium leading-relaxed [text-shadow:0_1px_12px_rgba(255,255,255,0.85)] dark:[text-shadow:none]">
                     Наставник-методист 7 проектных лагерей «Иннагрики»
                   </span>
                 </li>
                 <li class="flex items-start gap-3">
-                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center">
-                    <Check :size="12" class="text-emerald-400" />
+                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-white/90 dark:bg-emerald-500/15 border border-emerald-600/60 dark:border-emerald-500/40 shadow-sm flex items-center justify-center">
+                    <Check :size="12" class="text-emerald-700 dark:text-emerald-400" />
                   </span>
-                  <span class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed">
+                  <span class="text-sm sm:text-base text-slate-900 dark:text-slate-200 font-medium leading-relaxed [text-shadow:0_1px_12px_rgba(255,255,255,0.85)] dark:[text-shadow:none]">
                     Составитель заданий НТО и Всесибирской олимпиады
                   </span>
                 </li>
@@ -152,70 +152,70 @@ import imgMedicine from './assets/images/photo_22.webp'
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               <!-- Карточка A: РСОШ -->
-              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+              <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
                 <img
                   :src="imgRsosh"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
-                  <Award :size="28" class="text-emerald-400 shrink-0" />
-                  <span class="text-emerald-400 tracking-tight">8</span>
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
+                  <Award :size="28" class="text-emerald-600 dark:text-emerald-400 shrink-0" />
+                  <span class="text-emerald-600 dark:text-emerald-400 tracking-tight">8</span>
                 </div>
-                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
-                  Победителей и призёров олимпиад из перечня <span class="text-emerald-400 font-semibold">РСОШ</span>
+                <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                  Победителей и призёров олимпиад из перечня <span class="text-emerald-600 dark:text-emerald-400 font-semibold">РСОШ</span>
                 </p>
               </div>
 
               <!-- Карточка B: ВсОШ -->
-              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+              <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
                 <img
                   :src="imgVsosh"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
-                  <Trophy :size="28" class="text-blue-400 shrink-0" />
-                  <span class="text-blue-400 tracking-tight">6 + 2</span>
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
+                  <Trophy :size="28" class="text-blue-600 dark:text-blue-400 shrink-0" />
+                  <span class="text-blue-600 dark:text-blue-400 tracking-tight">6 + 2</span>
                 </div>
-                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
-                  Призёров региона и участников финала <span class="text-blue-400 font-semibold">ВсОШ</span>
+                <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                  Призёров региона и участников финала <span class="text-blue-600 dark:text-blue-400 font-semibold">ВсОШ</span>
                 </p>
               </div>
 
               <!-- Карточка C: Большие вызовы -->
-              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+              <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
                 <img
                   :src="imgChallenges"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
-                  <CheckCircle :size="28" class="text-purple-400 shrink-0" />
-                  <span class="text-purple-400 tracking-tight">6</span>
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
+                  <CheckCircle :size="28" class="text-purple-600 dark:text-purple-400 shrink-0" />
+                  <span class="text-purple-600 dark:text-purple-400 tracking-tight">6</span>
                 </div>
-                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
-                  Победителей конкурса <span class="text-purple-400 font-semibold">«Большие вызовы»</span>
+                <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                  Победителей конкурса <span class="text-purple-600 dark:text-purple-400 font-semibold">«Большие вызовы»</span>
                 </p>
               </div>
 
               <!-- Карточка D: Старт в медицину -->
-              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+              <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
                 <img
                   :src="imgMedicine"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
-                  <BookOpen :size="28" class="text-amber-400 shrink-0" />
-                  <span class="text-amber-400 tracking-tight">3</span>
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
+                  <BookOpen :size="28" class="text-amber-600 dark:text-amber-400 shrink-0" />
+                  <span class="text-amber-600 dark:text-amber-400 tracking-tight">3</span>
                 </div>
-                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
-                  Победителя конференции <span class="text-amber-400 font-semibold">«Старт в медицину»</span>
+                <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                  Победителя конференции <span class="text-amber-600 dark:text-amber-400 font-semibold">«Старт в медицину»</span>
                 </p>
               </div>
 

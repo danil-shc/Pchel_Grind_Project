@@ -160,10 +160,10 @@ const scrollToNext = () => {
 
     <div class="flex-1 min-h-0 flex flex-col justify-between mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-3 pb-4 sm:pt-4 lg:pb-8">
       <div class="shrink-0 mb-3 sm:mb-4 max-w-2xl">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight mb-2 sm:mb-3">
-          Академическое портфолио <span class="text-emerald-400">исследователя</span>.
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-2 sm:mb-3">
+          Академическое портфолио <span class="text-emerald-600 dark:text-emerald-400">исследователя</span>.
         </h1>
-        <p class="text-sm sm:text-base text-slate-300 font-normal mt-0 mb-0 opacity-90 leading-normal">
+        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-normal mt-0 mb-0 opacity-90 leading-normal">
           Генетика, биотехнологии и разработка ПЦР-систем.
         </p>
       </div>
@@ -177,7 +177,7 @@ const scrollToNext = () => {
 
           <!-- Бейдж "ОБО МНЕ" -->
           <span
-            class="absolute top-12 sm:top-4 left-3 sm:left-4 z-30 w-fit h-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 backdrop-blur-md uppercase tracking-wider">
+            class="absolute top-12 sm:top-4 left-3 sm:left-4 z-30 w-fit h-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/85 dark:bg-emerald-950/80 border border-emerald-500/40 text-emerald-700 dark:text-emerald-400 backdrop-blur-md uppercase tracking-wider">
             <User :size="12" />Обо мне
           </span>
 
@@ -237,7 +237,7 @@ const scrollToNext = () => {
           </div>
 
           <!-- Градиентная подложка для текста (только мобилка) -->
-          <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-[#0d131f] via-[#0d131f]/40 to-transparent pointer-events-none z-10 md:hidden"></div>
+          <div class="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-white via-white/50 to-transparent dark:from-[#0d131f] dark:via-[#0d131f]/40 pointer-events-none z-10 md:hidden"></div>
 
           <!-- Текстовый блок внизу -->
           <div
@@ -245,24 +245,24 @@ const scrollToNext = () => {
 
             <div class="relative pointer-events-auto md:order-1">
               <h2
-                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight text-white md:text-slate-900 md:dark:text-white drop-shadow-md md:drop-shadow-none">
+                class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white dark:drop-shadow-md">
                 Пчелинцев <br class="hidden sm:inline"> Михаил Игоревич
               </h2>
             </div>
 
             <div
-              class="relative text-white md:text-slate-700 md:dark:text-slate-300 text-xs sm:text-sm font-medium mt-3 md:mt-4 max-w-full drop-shadow-md md:drop-shadow-none pointer-events-auto space-y-1.5 leading-relaxed md:order-2">
+              class="relative text-slate-700 dark:text-slate-200 md:dark:text-slate-300 text-xs sm:text-sm font-medium mt-3 md:mt-4 max-w-full dark:drop-shadow-md pointer-events-auto space-y-1.5 leading-relaxed md:order-2">
               <div class="flex items-start gap-2.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
-                <span class="leading-snug">Стажер-исследователь <span class="font-semibold text-emerald-400 md:text-emerald-500">Первого МГМУ им. И. М. Сеченова</span></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
+                <span class="leading-snug">Стажер-исследователь <span class="font-semibold text-emerald-600 dark:text-emerald-400">Первого МГМУ им. И. М. Сеченова</span></span>
               </div>
               <div class="flex items-start gap-2.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
-                <span class="leading-snug">Стажер компании <span class="font-semibold text-emerald-400 md:text-emerald-500">Genotek</span></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
+                <span class="leading-snug">Стажер компании <span class="font-semibold text-emerald-600 dark:text-emerald-400">Genotek</span></span>
               </div>
               <div class="flex items-start gap-2.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
-                <span class="leading-snug">Педагог <span class="font-semibold text-emerald-400 md:text-emerald-500">АПО</span> и <span class="font-semibold text-emerald-400 md:text-emerald-500">ЦПМ</span></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
+                <span class="leading-snug">Педагог <span class="font-semibold text-emerald-600 dark:text-emerald-400">АПО</span> и <span class="font-semibold text-emerald-600 dark:text-emerald-400">ЦПМ</span></span>
               </div>
             </div>
           </div>
@@ -276,7 +276,7 @@ const scrollToNext = () => {
                 class="p-2 sm:p-2.5 rounded-2xl bg-sky-500/10 text-sky-500 transition-transform duration-300 ease-in-out will-change-transform transform-gpu group-hover:scale-110">
                 <Send :size="18" class="sm:w-5 sm:h-5" />
               </div>
-              <span class="text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 shrink-0">Блог</span>
+              <span class="text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-600 dark:text-sky-400 shrink-0">Блог</span>
             </div>
             <div>
               <h3 class="font-bold text-base sm:text-lg md:text-xl text-slate-900 dark:text-white mb-0.5 sm:mb-1">Telegram Канал</h3>
@@ -291,7 +291,7 @@ const scrollToNext = () => {
                 class="p-2 sm:p-2.5 rounded-2xl bg-emerald-500/10 text-emerald-500 transition-transform duration-300 ease-in-out will-change-transform transform-gpu group-hover:scale-110">
                 <BookOpen :size="18" class="sm:w-5 sm:h-5" />
               </div>
-              <span class="text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 shrink-0">Scopus / ВАК</span>
+              <span class="text-[10px] sm:text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 shrink-0">Scopus / ВАК</span>
             </div>
             <div>
               <h3 class="font-bold text-base sm:text-lg md:text-xl text-slate-900 dark:text-white mb-0.5 sm:mb-1">Публикации</h3>
@@ -307,11 +307,11 @@ const scrollToNext = () => {
       @click="scrollToNext"
       class="absolute bottom-4 md:bottom-6 lg:bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center justify-center gap-1.5 cursor-pointer select-none group transition-opacity duration-300 hover:opacity-100 opacity-70"
     >
-      <span class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-slate-400 group-hover:text-emerald-400 transition-colors">
+      <span class="text-[10px] sm:text-xs font-semibold tracking-widest uppercase text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
         Листать
       </span>
       <svg 
-        class="w-4 h-4 text-slate-400 group-hover:text-emerald-400 transition-all duration-300 group-hover:translate-y-1 animate-bounce" 
+        class="w-4 h-4 text-slate-500 dark:text-slate-400 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-all duration-300 group-hover:translate-y-1 animate-bounce" 
         fill="none" 
         viewBox="0 0 24 24" 
         stroke="currentColor"

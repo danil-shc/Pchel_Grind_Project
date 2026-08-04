@@ -14,7 +14,7 @@ import imgStudents from './assets/images/photo_42.webp'
       
       <!-- Заголовок секции -->
       <div class="mb-8 sm:mb-12 reveal-item">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 uppercase tracking-wider">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] sm:text-xs font-semibold rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
           Достижения
         </span>
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 text-slate-900 dark:text-white">
@@ -27,30 +27,30 @@ import imgStudents from './assets/images/photo_42.webp'
         
         <!-- Карточка 1: Публикации -->
         <div class="reveal-item delay-100 h-full">
-          <div class="relative overflow-hidden rounded-2xl border border-slate-800/80 group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
+          <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
             <img :src="imgPubs" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
-              <div class="p-2.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-slate-700/50 inline-flex items-center justify-center">
-                <TrendingUp :size="20" class="text-emerald-400 sm:w-6 sm:h-6" />
+              <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center">
+                <TrendingUp :size="20" class="text-emerald-600 dark:text-emerald-400 sm:w-6 sm:h-6" />
               </div>
             </div>
             
             <!-- Нижний блок: Цифра + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <div class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-1">
+              <div class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-1">
                 21
               </div>
-              <h3 class="text-base font-semibold text-slate-100 mb-1">
+              <h3 class="text-base font-semibold text-slate-800 dark:text-slate-100 mb-1">
                 Публикация
               </h3>
-              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
-                Урология, иммуногенетика, агробиотех, вирусология (<span class="text-emerald-400 font-medium">ORCID</span>, <span class="text-emerald-400 font-medium">РИНЦ</span>)
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                Урология, иммуногенетика, агробиотех, вирусология (<span class="text-emerald-600 dark:text-emerald-400 font-medium">ORCID</span>, <span class="text-emerald-600 dark:text-emerald-400 font-medium">РИНЦ</span>)
               </p>
             </div>
           </div>
@@ -58,30 +58,30 @@ import imgStudents from './assets/images/photo_42.webp'
 
         <!-- Карточка 2: Патенты -->
         <div class="reveal-item delay-200 h-full">
-          <div class="relative overflow-hidden rounded-2xl border border-slate-800/80 group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
+          <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
             <img :src="imgPatents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
-              <div class="p-2.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-slate-700/50 inline-flex items-center justify-center">
-                <Award :size="20" class="text-blue-400 sm:w-6 sm:h-6" />
+              <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center">
+                <Award :size="20" class="text-blue-600 dark:text-blue-400 sm:w-6 sm:h-6" />
               </div>
             </div>
             
             <!-- Нижний блок: Цифра + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <div class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-1">
+              <div class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-1">
                 2
               </div>
-              <h3 class="text-base font-semibold text-slate-100 mb-1">
+              <h3 class="text-base font-semibold text-slate-800 dark:text-slate-100 mb-1">
                 Патента и разработки
               </h3>
-              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
-                <span class="text-blue-400 font-medium">Кавернотом Меньщикова</span> и <span class="text-blue-400 font-medium">ПЦР-панели</span> для аквакультуры
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                <span class="text-blue-600 dark:text-blue-400 font-medium">Кавернотом Меньщикова</span> и <span class="text-blue-600 dark:text-blue-400 font-medium">ПЦР-панели</span> для аквакультуры
               </p>
             </div>
           </div>
@@ -89,30 +89,30 @@ import imgStudents from './assets/images/photo_42.webp'
 
         <!-- Карточка 3: Опыт -->
         <div class="reveal-item delay-300 h-full">
-          <div class="relative overflow-hidden rounded-2xl border border-slate-800/80 group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
+          <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
             <img :src="imgExp" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
-              <div class="p-2.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-slate-700/50 inline-flex items-center justify-center">
-                <Briefcase :size="20" class="text-violet-400 sm:w-6 sm:h-6" />
+              <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center">
+                <Briefcase :size="20" class="text-violet-600 dark:text-violet-400 sm:w-6 sm:h-6" />
               </div>
             </div>
             
             <!-- Нижний блок: Цифра + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <div class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-1">
+              <div class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-1">
                 5+ лет
               </div>
-              <h3 class="text-base font-semibold text-slate-100 mb-1">
+              <h3 class="text-base font-semibold text-slate-800 dark:text-slate-100 mb-1">
                 Опыта в генетике
               </h3>
-              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
-                <span class="text-purple-400 font-medium">Genotek</span>, <span class="text-purple-400 font-medium">Сеченовский Университет</span>, <span class="text-purple-400 font-medium">ИБГ РАН</span>, <span class="text-purple-400 font-medium">ЦРО «Интеграция»</span>
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                <span class="text-purple-600 dark:text-purple-400 font-medium">Genotek</span>, <span class="text-purple-600 dark:text-purple-400 font-medium">Сеченовский Университет</span>, <span class="text-purple-600 dark:text-purple-400 font-medium">ИБГ РАН</span>, <span class="text-purple-600 dark:text-purple-400 font-medium">ЦРО «Интеграция»</span>
               </p>
             </div>
           </div>
@@ -120,30 +120,30 @@ import imgStudents from './assets/images/photo_42.webp'
 
         <!-- Карточка 4: Ученики -->
         <div class="reveal-item delay-400 h-full">
-          <div class="relative overflow-hidden rounded-2xl border border-slate-800/80 group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
+          <div class="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none group p-6 sm:p-8 h-full w-full flex flex-col justify-between">
             <!-- Фоновое изображение -->
             <img :src="imgStudents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 z-0" />
             
             <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/60 to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
             
             <!-- Верхний блок: Иконка -->
             <div class="flex items-center justify-between mb-6 relative z-20">
-              <div class="p-2.5 rounded-xl bg-slate-900/60 backdrop-blur-md border border-slate-700/50 inline-flex items-center justify-center">
-                <Users :size="20" class="text-amber-400 sm:w-6 sm:h-6" />
+              <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center">
+                <Users :size="20" class="text-amber-600 dark:text-amber-400 sm:w-6 sm:h-6" />
               </div>
             </div>
             
             <!-- Нижний блок: Цифра + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <div class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-1">
+              <div class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-1">
                 20+
               </div>
-              <h3 class="text-base font-semibold text-slate-100 mb-1">
+              <h3 class="text-base font-semibold text-slate-800 dark:text-slate-100 mb-1">
                 Победителей олимпиад
               </h3>
-              <p class="text-sm text-slate-200 font-normal leading-relaxed opacity-100">
-                Подготовка учеников <span class="text-amber-400 font-medium">ВсОШ</span>, <span class="text-amber-400 font-medium">«Большие вызовы»</span>, <span class="text-amber-400 font-medium">НТО</span>
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+                Подготовка учеников <span class="text-amber-600 dark:text-amber-400 font-medium">ВсОШ</span>, <span class="text-amber-600 dark:text-amber-400 font-medium">«Большие вызовы»</span>, <span class="text-amber-600 dark:text-amber-400 font-medium">НТО</span>
               </p>
             </div>
           </div>

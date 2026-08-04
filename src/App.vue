@@ -12,7 +12,7 @@ const isDark = ref(true)
 </script>
 
 <template>
-  <div :class="{ 'dark': isDark }" class="min-height-screen transition-colors duration-300 overflow-x-hidden">
+  <div :class="{ 'dark': isDark }" class="theme-root min-height-screen transition-colors duration-300 overflow-x-hidden">
     <div class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen font-sans antialiased overflow-x-hidden">
 
       <main class="w-full">
