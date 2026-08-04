@@ -1,5 +1,12 @@
 <script setup>
-import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-next'
+import { GraduationCap, Trophy, Award, BookOpen, CheckCircle, Check } from 'lucide-vue-next'
+
+// Фоновые изображения для баннера наставничества и карточек результатов
+import imgMentorship from './assets/images/photo_3.webp'
+import imgRsosh from './assets/images/photo_25.webp'
+import imgVsosh from './assets/images/photo_46.webp'
+import imgChallenges from './assets/images/photo_45.webp'
+import imgMedicine from './assets/images/photo_22.webp'
 </script>
 
 <template>
@@ -105,60 +112,113 @@ import { GraduationCap, Trophy, Award, BookOpen, CheckCircle } from 'lucide-vue-
               </h3>
             </div>
 
+            <!-- Баннер: роли и наставничество -->
+            <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900 p-5 sm:p-6 mb-6 group">
+              <img
+                :src="imgMentorship"
+                alt="Наставничество"
+                class="absolute inset-0 h-full w-full object-cover object-[center_70%] md:object-[center_62%] lg:object-[center_70%] opacity-70 brightness-105 group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-linear-to-r from-slate-950/75 via-slate-950/50 to-slate-950/30 z-10"></div>
+
+              <ul class="relative z-20 space-y-3">
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center">
+                    <Check :size="12" class="text-emerald-400" />
+                  </span>
+                  <span class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed">
+                    Куратор группы резерва сборной Москвы по биологии
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center">
+                    <Check :size="12" class="text-emerald-400" />
+                  </span>
+                  <span class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed">
+                    Наставник-методист 7 проектных лагерей «Иннагрики»
+                  </span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-0.5 shrink-0 w-5 h-5 rounded-full bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center">
+                    <Check :size="12" class="text-emerald-400" />
+                  </span>
+                  <span class="text-sm sm:text-base text-slate-200 font-medium leading-relaxed">
+                    Составитель заданий НТО и Всесибирской олимпиады
+                  </span>
+                </li>
+              </ul>
+            </div>
+
             <!-- Сетка ключевых показателей -->
-            <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               <!-- Карточка A: РСОШ -->
-              <div class="bg-slate-950/60 border border-slate-700/50 rounded-xl p-4 hover:border-emerald-500/40 transition-all duration-300">
-                <div class="flex items-center gap-2 mb-2">
-                  <Award :size="16" class="text-emerald-400" />
-                  <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">8</div>
+              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+                <img
+                  :src="imgRsosh"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
+                  <Award :size="28" class="text-emerald-400 shrink-0" />
+                  <span class="text-emerald-400 tracking-tight">8</span>
                 </div>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                  Победителей и призёров олимпиад из перечня РСОШ
+                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
+                  Победителей и призёров олимпиад из перечня <span class="text-emerald-400 font-semibold">РСОШ</span>
                 </p>
               </div>
 
               <!-- Карточка B: ВсОШ -->
-              <div class="bg-slate-950/60 border border-slate-700/50 rounded-xl p-4 hover:border-blue-500/40 transition-all duration-300">
-                <div class="flex items-center gap-2 mb-2">
-                  <Trophy :size="16" class="text-blue-400" />
-                  <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">6 + 2</div>
+              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+                <img
+                  :src="imgVsosh"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
+                  <Trophy :size="28" class="text-blue-400 shrink-0" />
+                  <span class="text-blue-400 tracking-tight">6 + 2</span>
                 </div>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                  Призёров региона и участников финала ВсОШ
+                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
+                  Призёров региона и участников финала <span class="text-blue-400 font-semibold">ВсОШ</span>
                 </p>
               </div>
 
               <!-- Карточка C: Большие вызовы -->
-              <div class="bg-slate-950/60 border border-slate-700/50 rounded-xl p-4 hover:border-violet-500/40 transition-all duration-300">
-                <div class="flex items-center gap-2 mb-2">
-                  <CheckCircle :size="16" class="text-violet-400" />
-                  <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">6</div>
+              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+                <img
+                  :src="imgChallenges"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
+                  <CheckCircle :size="28" class="text-purple-400 shrink-0" />
+                  <span class="text-purple-400 tracking-tight">6</span>
                 </div>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                  Победителей конкурса «Большие вызовы»
+                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
+                  Победителей конкурса <span class="text-purple-400 font-semibold">«Большие вызовы»</span>
                 </p>
               </div>
 
               <!-- Карточка D: Старт в медицину -->
-              <div class="bg-slate-950/60 border border-slate-700/50 rounded-xl p-4 hover:border-amber-500/40 transition-all duration-300">
-                <div class="flex items-center gap-2 mb-2">
-                  <BookOpen :size="16" class="text-amber-400" />
-                  <div class="text-2xl sm:text-3xl font-black text-white tracking-tight">3</div>
+              <div class="relative overflow-hidden rounded-xl border border-white/10 bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
+                <img
+                  :src="imgMedicine"
+                  alt=""
+                  class="absolute inset-0 h-full w-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-linear-to-t from-slate-950/90 via-slate-950/55 to-slate-950/15 z-10"></div>
+
+                <div class="relative text-3xl sm:text-4xl font-extrabold text-white mb-2 z-20 flex items-center gap-3">
+                  <BookOpen :size="28" class="text-amber-400 shrink-0" />
+                  <span class="text-amber-400 tracking-tight">3</span>
                 </div>
-                <p class="text-sm text-slate-300 leading-relaxed">
-                  Победителя конференции «Старт в медицину»
+                <p class="relative text-sm text-slate-200 font-medium leading-snug z-20 opacity-95">
+                  Победителя конференции <span class="text-amber-400 font-semibold">«Старт в медицину»</span>
                 </p>
               </div>
 
-            </div>
-
-            <!-- Текстовый подвал с дополнительной информацией -->
-            <div class="bg-slate-950/60 border border-slate-700/50 rounded-xl p-4">
-              <p class="text-sm text-slate-300 leading-relaxed font-normal">
-                Куратор группы резерва сборной Москвы по биологии. Наставник-методист 7 проектных лагерей «Иннагрики». Составитель заданий НТО и Всесибирской олимпиады.
-              </p>
             </div>
 
           </div>
