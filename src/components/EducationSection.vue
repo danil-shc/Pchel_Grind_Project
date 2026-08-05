@@ -206,9 +206,11 @@ const PARTNER_LINKS = {
                   class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
-                  <Award :size="28" class="text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span class="text-emerald-600 dark:text-emerald-400 tracking-tight">8</span>
+                <div class="relative z-20 mb-2 flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
+                    <Award :size="20" class="text-emerald-600 dark:text-emerald-400 sm:w-6 sm:h-6" />
+                  </div>
+                  <span class="text-3xl sm:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">8</span>
                 </div>
                 <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                   Победителей и призёров олимпиад из перечня <span class="text-emerald-600 dark:text-emerald-400 font-semibold">РСОШ</span>
@@ -223,9 +225,11 @@ const PARTNER_LINKS = {
                   class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
-                  <Trophy :size="28" class="text-blue-600 dark:text-blue-400 shrink-0" />
-                  <span class="text-blue-600 dark:text-blue-400 tracking-tight">6 + 2</span>
+                <div class="relative z-20 mb-2 flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
+                    <Trophy :size="20" class="text-blue-600 dark:text-blue-400 sm:w-6 sm:h-6" />
+                  </div>
+                  <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">6 + 2</span>
                 </div>
                 <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                   Призёров региона и участников финала <span class="text-blue-600 dark:text-blue-400 font-semibold">ВсОШ</span>
@@ -240,9 +244,11 @@ const PARTNER_LINKS = {
                   class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
-                  <CheckCircle :size="28" class="text-purple-600 dark:text-purple-400 shrink-0" />
-                  <span class="text-purple-600 dark:text-purple-400 tracking-tight">6</span>
+                <div class="relative z-20 mb-2 flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
+                    <CheckCircle :size="20" class="text-purple-600 dark:text-purple-400 sm:w-6 sm:h-6" />
+                  </div>
+                  <span class="text-3xl sm:text-4xl font-extrabold text-purple-600 dark:text-purple-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">6</span>
                 </div>
                 <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                   Победителей конкурса <span class="text-purple-600 dark:text-purple-400 font-semibold">«Большие вызовы»</span>
@@ -257,9 +263,11 @@ const PARTNER_LINKS = {
                   class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/60 via-slate-50/10 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10"></div>
 
-                <div class="relative text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-2 z-20 flex items-center gap-3">
-                  <BookOpen :size="28" class="text-amber-600 dark:text-amber-400 shrink-0" />
-                  <span class="text-amber-600 dark:text-amber-400 tracking-tight">3</span>
+                <div class="relative z-20 mb-2 flex items-center gap-3">
+                  <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
+                    <BookOpen :size="20" class="text-amber-600 dark:text-amber-400 sm:w-6 sm:h-6" />
+                  </div>
+                  <span class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">3</span>
                 </div>
                 <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                   Победителя конференции <span class="text-amber-600 dark:text-amber-400 font-semibold">«Старт в медицину»</span>
