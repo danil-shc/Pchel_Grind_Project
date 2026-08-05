@@ -31,24 +31,23 @@ import imgStudents from './assets/images/photo_42.webp'
             <!-- Фоновое изображение -->
             <img :src="imgPubs" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
-            <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10 pointer-events-none"></div>
             
             <!-- Верхний блок: Иконка + Цифра -->
             <div class="relative z-20 mb-2 flex items-center gap-3">
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <TrendingUp :size="20" class="text-emerald-600 dark:text-emerald-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">21</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-emerald-700 dark:text-emerald-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">21</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <h3 class="text-base font-semibold text-emerald-600 dark:text-emerald-400 mb-1 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-base font-semibold text-slate-900 dark:text-white mb-1 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 Публикация
               </h3>
-              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Урология, иммуногенетика, агробиотех, вирусология (<span class="text-emerald-600 dark:text-emerald-400 font-semibold">ORCID</span>, <span class="text-emerald-600 dark:text-emerald-400 font-semibold">РИНЦ</span>)
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                Урология, иммуногенетика, агробиотех, вирусология (<span class="text-emerald-700 dark:text-emerald-400 font-semibold">ORCID</span>, <span class="text-emerald-700 dark:text-emerald-400 font-semibold">РИНЦ</span>)
               </p>
             </div>
           </div>
@@ -60,24 +59,23 @@ import imgStudents from './assets/images/photo_42.webp'
             <!-- Фоновое изображение -->
             <img :src="imgPatents" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
-            <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10 pointer-events-none"></div>
             
             <!-- Верхний блок: Иконка + Цифра -->
             <div class="relative z-20 mb-2 flex items-center gap-3">
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <Award :size="20" class="text-blue-600 dark:text-blue-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">2</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-blue-700 dark:text-blue-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">2</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <h3 class="text-base font-semibold text-blue-600 dark:text-blue-400 mb-1 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-base font-semibold text-slate-900 dark:text-white mb-1 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 Патента и разработки
               </h3>
-              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                <span class="text-blue-600 dark:text-blue-400 font-semibold">Кавернотом Меньщикова</span> и <span class="text-blue-600 dark:text-blue-400 font-semibold">ПЦР-панели</span> для аквакультуры
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                <span class="text-blue-700 dark:text-blue-400 font-semibold">Кавернотом Меньщикова</span> и <span class="text-blue-700 dark:text-blue-400 font-semibold">ПЦР-панели</span> для аквакультуры
               </p>
             </div>
           </div>
@@ -89,24 +87,23 @@ import imgStudents from './assets/images/photo_42.webp'
             <!-- Фоновое изображение -->
             <img :src="imgExp" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
-            <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10 pointer-events-none"></div>
             
             <!-- Верхний блок: Иконка + Цифра -->
             <div class="relative z-20 mb-2 flex items-center gap-3">
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <Briefcase :size="20" class="text-purple-600 dark:text-purple-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-purple-600 dark:text-purple-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">5+ лет</span>
+              <span class="text-3xl sm:text-4xl font-extrabold tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]"><span class="text-purple-700 dark:text-purple-400">5+</span><span class="text-slate-900 dark:text-white"> лет</span></span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <h3 class="text-base font-semibold text-purple-600 dark:text-purple-400 mb-1 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-base font-semibold text-slate-900 dark:text-white mb-1 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 Опыта в генетике
               </h3>
-              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                <span class="text-purple-600 dark:text-purple-400 font-semibold">Genotek</span>, <span class="text-purple-600 dark:text-purple-400 font-semibold">Сеченовский Университет</span>, <span class="text-purple-600 dark:text-purple-400 font-semibold">ИБГ РАН</span>, <span class="text-purple-600 dark:text-purple-400 font-semibold">ЦРО «Интеграция»</span>
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                <span class="text-purple-700 dark:text-purple-400 font-semibold">Genotek</span>, <span class="text-purple-700 dark:text-purple-400 font-semibold">Сеченовский Университет</span>, <span class="text-purple-700 dark:text-purple-400 font-semibold">ИБГ РАН</span>, <span class="text-purple-700 dark:text-purple-400 font-semibold">ЦРО «Интеграция»</span>
               </p>
             </div>
           </div>
@@ -118,24 +115,23 @@ import imgStudents from './assets/images/photo_42.webp'
             <!-- Фоновое изображение -->
             <img :src="imgStudents" alt="" class="absolute inset-0 w-full h-full object-cover object-[center_32%] sm:object-center transition-transform duration-700 ease-out group-hover:scale-105 z-0" />
             
-            <!-- Тёмный градиент для читаемости -->
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/65 via-slate-50/15 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-900/90 dark:via-slate-900/60 dark:to-slate-900/30 z-10 pointer-events-none"></div>
             
             <!-- Верхний блок: Иконка + Цифра -->
             <div class="relative z-20 mb-2 flex items-center gap-3">
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <Users :size="20" class="text-amber-600 dark:text-amber-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400 tracking-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">20+</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-amber-700 dark:text-amber-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">20+</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
-              <h3 class="text-base font-semibold text-amber-600 dark:text-amber-400 mb-1 [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-base font-semibold text-slate-900 dark:text-white mb-1 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 Победителей олимпиад
               </h3>
-              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Подготовка учеников <span class="text-amber-600 dark:text-amber-400 font-semibold">ВсОШ</span>, <span class="text-amber-600 dark:text-amber-400 font-semibold">«Большие вызовы»</span>, <span class="text-amber-600 dark:text-amber-400 font-semibold">НТО</span>
+              <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                Подготовка учеников <span class="text-amber-700 dark:text-amber-400 font-semibold">ВсОШ</span>, <span class="text-amber-700 dark:text-amber-400 font-semibold">«Большие вызовы»</span>, <span class="text-amber-700 dark:text-amber-400 font-semibold">НТО</span>
               </p>
             </div>
           </div>

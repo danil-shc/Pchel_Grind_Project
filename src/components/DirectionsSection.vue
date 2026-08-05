@@ -26,18 +26,18 @@ import leader from './assets/images/photo_41.webp'
               alt="Молекулярная генетика" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/60 via-slate-50/12 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-white/85 dark:bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-400 shadow-lg">
               Лаборатория
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Молекулярная генетика
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Разработка <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ПЦР-тест-систем</span>, поиск <span class="text-emerald-600 dark:text-emerald-400 font-semibold">генетических маркеров</span>, конструирование панелей и исследования урологических заболеваний в <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Сеченовском Университете</span>.
+              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                Разработка <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ПЦР-тест-систем</span>, поиск <span class="text-emerald-700 dark:text-emerald-400 font-semibold">генетических маркеров</span>, конструирование панелей и исследования урологических заболеваний в <span class="text-emerald-700 dark:text-emerald-400 font-semibold">Сеченовском Университете</span>.
               </p>
             </div>
           </div>
@@ -50,18 +50,18 @@ import leader from './assets/images/photo_41.webp'
               alt="Биоинформатика" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/60 via-slate-50/12 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-white/85 dark:bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-400 shadow-lg">
               Биоинформатика
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Биоинформатика & SNP-анализ
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Обработка данных <span class="text-emerald-600 dark:text-emerald-400 font-semibold">NGS и GWAS</span>, аннотация вариантов (<span class="text-emerald-600 dark:text-emerald-400 font-semibold">NCBI</span>, <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ClinVar</span>, <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Ensembl</span>), ведение протоколов и аналитическая биофизика (<span class="text-emerald-600 dark:text-emerald-400 font-semibold">Genotek</span> / <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ИБГ РАН</span>).
+              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                Обработка данных <span class="text-emerald-700 dark:text-emerald-400 font-semibold">NGS и GWAS</span>, аннотация вариантов (<span class="text-emerald-700 dark:text-emerald-400 font-semibold">NCBI</span>, <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ClinVar</span>, <span class="text-emerald-700 dark:text-emerald-400 font-semibold">Ensembl</span>), ведение протоколов и аналитическая биофизика (<span class="text-emerald-700 dark:text-emerald-400 font-semibold">Genotek</span> / <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ИБГ РАН</span>).
               </p>
             </div>
           </div>
@@ -74,18 +74,18 @@ import leader from './assets/images/photo_41.webp'
               alt="Агрогенетика и проекты" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/60 via-slate-50/12 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-white/85 dark:bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-400 shadow-lg">
               Агробиотех & Проекты
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Агрогенетика & Менеджмент
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Молекулярно-генетическая оценка дигаплоидных линий рапса в <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ЦРО «Интеграция»</span>, разработка <span class="text-emerald-600 dark:text-emerald-400 font-semibold">маркеров устойчивости</span> и паспортизация культур.
+              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                Молекулярно-генетическая оценка дигаплоидных линий рапса в <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ЦРО «Интеграция»</span>, разработка <span class="text-emerald-700 dark:text-emerald-400 font-semibold">маркеров устойчивости</span> и паспортизация культур.
               </p>
             </div>
           </div>
@@ -98,18 +98,18 @@ import leader from './assets/images/photo_41.webp'
               alt="Наука и спикерство" 
               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-50/60 via-slate-50/12 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-white/85 dark:bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-400 shadow-lg">
               Наставничество & Спикерство
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
+              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Наука & Олимпиадное движение
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Доклады на конгрессах учёных, руководство проектными командами в <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ОЦ «Сириус»</span>, подготовка резерва <span class="text-emerald-600 dark:text-emerald-400 font-semibold">сборной Москвы</span> и победителей <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ВсОШ</span>.
+              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                Доклады на конгрессах учёных, руководство проектными командами в <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ОЦ «Сириус»</span>, подготовка резерва <span class="text-emerald-700 dark:text-emerald-400 font-semibold">сборной Москвы</span> и победителей <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ВсОШ</span>.
               </p>
             </div>
           </div>
