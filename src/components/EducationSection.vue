@@ -9,6 +9,11 @@ import imgChallenges from './assets/images/photo_45.webp'
 import imgMedicine from './assets/images/photo_22.webp'
 import logoSechenov from '@/components/assets/logos/sechenov.png'
 import logoSirius from '@/components/assets/logos/sirius.png'
+
+const PARTNER_LINKS = {
+  sechenov: 'https://www.sechenov.ru/',
+  sirius: 'https://sochisirius.ru/'
+}
 </script>
 
 <template>
@@ -33,7 +38,7 @@ import logoSirius from '@/components/assets/logos/sirius.png'
         
         <!-- Колонка 1: Образование & Квалификация -->
         <div class="reveal-item delay-100">
-          <div class="h-full bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none rounded-2xl p-6 sm:p-8">
+          <div class="h-full flex flex-col bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none rounded-2xl p-6 sm:p-8">
             
             <!-- Заголовок колонки -->
             <div class="flex items-center gap-3 mb-6">
@@ -53,7 +58,14 @@ import logoSirius from '@/components/assets/logos/sirius.png'
                 <div class="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
                 <div>
                   <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1">
-                    Сеченовский Университет (6 курс)
+                    <a
+                      :href="PARTNER_LINKS.sechenov"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="cursor-pointer hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                      Сеченовский Университет
+                    </a>
+                    (6 курс)
                   </h4>
                   <p class="text-emerald-600 dark:text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Лечебное дело, специализация «Врач-исследователь»
@@ -85,7 +97,14 @@ import logoSirius from '@/components/assets/logos/sirius.png'
                 <div class="absolute -left-1.25 top-2 w-2 h-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(52,211,153,0.8)]"></div>
                 <div>
                   <h4 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-1">
-                    ОЦ «Сириус» и УрФУ (2024)
+                    <a
+                      :href="PARTNER_LINKS.sirius"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="cursor-pointer hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                      ОЦ «Сириус»
+                    </a>
+                    и УрФУ (2024)
                   </h4>
                   <p class="text-emerald-600 dark:text-emerald-400 font-medium text-sm sm:text-base mb-2">
                     Повышение квалификации
@@ -98,20 +117,30 @@ import logoSirius from '@/components/assets/logos/sirius.png'
 
             </div>
 
-            <!-- Нижняя плашка с логотипами -->
-            <div class="mt-8 pt-5 border-t border-white/10">
-              <div class="flex items-center justify-around gap-4 rounded-xl bg-white/[0.02] p-4 border border-white/5 backdrop-blur-sm">
+            <!-- Логотипы внизу карточки -->
+            <div class="mt-auto pt-6 border-t border-slate-200/60 dark:border-slate-800/60 flex items-center justify-around gap-6">
+              <a
+                :href="PARTNER_LINKS.sechenov"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cursor-pointer">
                 <img 
                   :src="logoSechenov" 
-                  class="h-10 sm:h-12 w-auto object-contain brightness-0 invert opacity-90 transition-opacity hover:opacity-100" 
+                  class="h-14 sm:h-16 w-auto object-contain brightness-0 invert opacity-90 contrast-125 transition-opacity hover:opacity-100" 
                   alt="Сеченовский Университет" 
                 />
+              </a>
+              <a
+                :href="PARTNER_LINKS.sirius"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="cursor-pointer">
                 <img 
                   :src="logoSirius" 
                   class="h-7 sm:h-8 w-auto object-contain brightness-0 invert opacity-85 transition-opacity hover:opacity-100" 
                   alt="ОЦ Сириус" 
                 />
-              </div>
+              </a>
             </div>
           </div>
         </div>

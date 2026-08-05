@@ -14,6 +14,12 @@ import sechenovLogo from '@/components/assets/logos/sechenov.png'
 import genotekLogo from '@/components/assets/logos/genotek.png'
 import siriusLogo from '@/components/assets/logos/sirius.png'
 
+const PARTNER_LINKS = {
+  sechenov: 'https://www.sechenov.ru/',
+  genotek: 'https://www.genotek.ru/',
+  sirius: 'https://sochisirius.ru/'
+}
+
 const SLIDE_DURATION_MS = 5000
 
 const slides = [
@@ -54,6 +60,10 @@ const SWIPE_MAX_ANGLE_RATIO = 1.5
 let touchStartX = 0
 let touchStartY = 0
 let touchActive = false
+
+let logoTouchStartX = 0
+let logoTouchStartY = 0
+let logoTouchActive = false
 
 const pauseSlider = () => {
   if (!supportsHoverPause.value) return
@@ -101,6 +111,40 @@ const onTouchCancel = () => {
   touchActive = false
 }
 
+// Свайп для слайдера логотипов (планшет/мобилка) — та же логика,
+// что и у фото-слайдера выше.
+const onLogoTouchStart = (event) => {
+  if (!supportsTouchNavigation.value || isProgressBarTarget(event.target)) return
+
+  const touch = event.touches[0]
+  logoTouchStartX = touch.clientX
+  logoTouchStartY = touch.clientY
+  logoTouchActive = true
+}
+
+const onLogoTouchEnd = (event) => {
+  if (!logoTouchActive) return
+  logoTouchActive = false
+
+  const touch = event.changedTouches[0]
+  const deltaX = touch.clientX - logoTouchStartX
+  const deltaY = touch.clientY - logoTouchStartY
+  const absX = Math.abs(deltaX)
+  const absY = Math.abs(deltaY)
+
+  if (absX < SWIPE_THRESHOLD_PX || absY > absX * SWIPE_MAX_ANGLE_RATIO) return
+
+  if (deltaX < 0) {
+    nextLogoSlide()
+  } else {
+    prevLogoSlide()
+  }
+}
+
+const onLogoTouchCancel = () => {
+  logoTouchActive = false
+}
+
 onMounted(() => {
   const finePointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)')
   const touchLayoutQuery = window.matchMedia('(max-width: 1023px)')
@@ -121,6 +165,7 @@ const logos = [
   {
     src: sechenovLogo,
     alt: 'Сеченовский Университет',
+    href: PARTNER_LINKS.sechenov,
     // Логотип вертикальный с мелким текстом под гербом — увеличенная высота
     // и contrast-125 нужны, чтобы детали оставались читаемыми в слайдере.
     class: 'h-20 sm:h-24 md:h-28 w-auto object-contain brightness-0 invert contrast-125 opacity-90'
@@ -128,17 +173,23 @@ const logos = [
   {
     src: genotekLogo,
     alt: 'Genotek',
+    href: PARTNER_LINKS.genotek,
     class: 'h-8 sm:h-10 md:h-11 w-auto object-contain brightness-0 invert opacity-90'
   },
   {
     src: siriusLogo,
     alt: 'Сириус',
+    href: PARTNER_LINKS.sirius,
     class: 'h-9 sm:h-11 md:h-12 w-auto object-contain brightness-0 invert opacity-90'
   }
 ]
 
 const {
   currentIndex: activeLogoIndex,
+  isPaused: isLogoPaused,
+  progressKey: logoProgressKey,
+  next: nextLogoSlide,
+  prev: prevLogoSlide,
   goTo: goToLogoSlide,
   pause: pauseLogoSlider,
   resume: resumeLogoSlider
@@ -245,11 +296,11 @@ const {
               class="relative text-slate-700 dark:text-slate-200 md:dark:text-slate-300 text-xs sm:text-sm font-medium mt-3 md:mt-4 max-w-full dark:drop-shadow-md pointer-events-auto space-y-1.5 leading-relaxed md:order-2">
               <div class="flex items-start gap-2.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
-                <span class="leading-snug">Стажер-исследователь <span class="font-semibold text-emerald-600 dark:text-emerald-400">Первого МГМУ им. И. М. Сеченова</span></span>
+                <span class="leading-snug">Стажер-исследователь <a :href="PARTNER_LINKS.sechenov" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-600 dark:text-emerald-400 cursor-pointer hover:underline underline-offset-2">Первого МГМУ им. И. М. Сеченова</a></span>
               </div>
               <div class="flex items-start gap-2.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
-                <span class="leading-snug">Стажер компании <span class="font-semibold text-emerald-600 dark:text-emerald-400">Genotek</span></span>
+                <span class="leading-snug">Стажер компании <a :href="PARTNER_LINKS.genotek" target="_blank" rel="noopener noreferrer" class="font-semibold text-emerald-600 dark:text-emerald-400 cursor-pointer hover:underline underline-offset-2">Genotek</a></span>
               </div>
               <div class="flex items-start gap-2.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
@@ -274,56 +325,98 @@ const {
           <!-- Desktop (lg и выше): компактный вертикальный ряд по центру, гарантированно вмещается по высоте -->
           <div class="hidden lg:flex flex-col items-center justify-center my-auto gap-6 xl:gap-8 w-full">
             <!-- Сеченовский Университет -->
-            <div class="flex items-center justify-center w-full">
+            <a
+              :href="PARTNER_LINKS.sechenov"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="sechenovLogo"
-                class="h-12 xl:h-14 w-auto object-contain brightness-0 invert opacity-95 contrast-125 hover:opacity-100 transition-opacity"
+                class="h-16 xl:h-19 w-auto object-contain brightness-0 invert opacity-95 contrast-125 hover:opacity-100 transition-opacity"
                 alt="Сеченовский Университет" />
-            </div>
+            </a>
 
             <div class="w-16 xl:w-20 h-[1px] bg-white/10"></div>
 
             <!-- Genotek -->
-            <div class="flex items-center justify-center w-full">
+            <a
+              :href="PARTNER_LINKS.genotek"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="genotekLogo"
                 class="h-7 xl:h-8 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
                 alt="Genotek" />
-            </div>
+            </a>
 
             <div class="w-16 xl:w-20 h-[1px] bg-white/10"></div>
 
             <!-- Сириус -->
-            <div class="flex items-center justify-center w-full">
+            <a
+              :href="PARTNER_LINKS.sirius"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="siriusLogo"
                 class="h-8 xl:h-9 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
                 alt="Сириус" />
-            </div>
+            </a>
           </div>
 
           <!-- Планшет и мобилка (< lg): слайдер логотипов -->
-          <div class="flex lg:hidden flex-1 min-h-0 flex-col justify-between w-full">
+          <div
+            class="flex lg:hidden flex-1 min-h-0 flex-col justify-between w-full touch-pan-y"
+            @touchstart.passive="onLogoTouchStart"
+            @touchend="onLogoTouchEnd"
+            @touchcancel="onLogoTouchCancel">
             <div class="relative flex-1 min-h-0 flex items-center justify-center">
               <transition name="logo-fade" mode="out-in">
-                <img
+                <a
                   :key="activeLogoIndex"
-                  :src="logos[activeLogoIndex].src"
-                  :class="logos[activeLogoIndex].class"
-                  :alt="logos[activeLogoIndex].alt" />
+                  :href="logos[activeLogoIndex].href"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cursor-pointer">
+                  <img
+                    :src="logos[activeLogoIndex].src"
+                    :class="logos[activeLogoIndex].class"
+                    :alt="logos[activeLogoIndex].alt" />
+                </a>
               </transition>
             </div>
 
-            <!-- Лампово-белые полосы прогресса снизу -->
-            <div class="flex gap-2 mt-3 w-full shrink-0">
+            <!-- Лампово-белые полосы прогресса снизу с эффектом "наливания" -->
+            <div
+              data-slide-progress
+              class="flex gap-2 mt-3 w-full shrink-0">
               <button
                 v-for="(logo, idx) in logos"
                 :key="idx"
                 type="button"
                 :aria-label="`Логотип ${idx + 1}`"
-                @click="goToLogoSlide(idx)"
-                class="h-1 flex-1 rounded-full cursor-pointer transition-all duration-300"
-                :class="activeLogoIndex === idx ? 'bg-white/90 shadow-[0_0_8px_rgba(255,255,255,0.5)]' : 'bg-white/20'"></button>
+                @click.stop="goToLogoSlide(idx)"
+                class="group/logo-progress relative flex-1 cursor-pointer touch-manipulation py-2 -my-2">
+                <span
+                  class="block h-1 rounded-full bg-white/20 overflow-hidden transition-colors duration-300 group-hover/logo-progress:bg-white/30 group-active/logo-progress:bg-white/40">
+                  <span
+                    v-if="idx < activeLogoIndex"
+                    class="block h-full w-full bg-white/90 shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                  />
+                  <span
+                    v-else-if="idx === activeLogoIndex"
+                    :key="`logo-progress-${activeLogoIndex}-${logoProgressKey}`"
+                    class="slide-progress-fill block h-full bg-white/90 shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                    :class="{ 'slide-progress-fill--paused': isLogoPaused }"
+                    :style="{ animationDuration: `${LOGO_SLIDE_DURATION_MS}ms` }"
+                  />
+                  <span
+                    v-else
+                    class="block h-full w-0 bg-white/90"
+                  />
+                </span>
+              </button>
             </div>
           </div>
         </div>
