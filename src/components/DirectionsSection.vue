@@ -33,11 +33,11 @@ import leader from './assets/images/photo_41.webp'
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight dark:drop-shadow-md">
+              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                 Молекулярная генетика
               </h3>
               <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Разработка ПЦР-тест-систем, поиск генетических маркеров, конструирование панелей и исследования урологических заболеваний в Сеченовском Университете.
+                Разработка <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ПЦР-тест-систем</span>, поиск <span class="text-emerald-600 dark:text-emerald-400 font-semibold">генетических маркеров</span>, конструирование панелей и исследования урологических заболеваний в <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Сеченовском Университете</span>.
               </p>
             </div>
           </div>
@@ -57,11 +57,11 @@ import leader from './assets/images/photo_41.webp'
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight dark:drop-shadow-md">
+              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                 Биоинформатика & SNP-анализ
               </h3>
               <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Обработка данных NGS и GWAS, аннотация вариантов (NCBI, ClinVar, Ensembl), ведение протоколов и аналитическая биофизика (Genotek / ИБГ РАН).
+                Обработка данных <span class="text-emerald-600 dark:text-emerald-400 font-semibold">NGS и GWAS</span>, аннотация вариантов (<span class="text-emerald-600 dark:text-emerald-400 font-semibold">NCBI</span>, <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ClinVar</span>, <span class="text-emerald-600 dark:text-emerald-400 font-semibold">Ensembl</span>), ведение протоколов и аналитическая биофизика (<span class="text-emerald-600 dark:text-emerald-400 font-semibold">Genotek</span> / <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ИБГ РАН</span>).
               </p>
             </div>
           </div>
@@ -81,11 +81,11 @@ import leader from './assets/images/photo_41.webp'
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight dark:drop-shadow-md">
+              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                 Агрогенетика & Менеджмент
               </h3>
               <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Молекулярно-генетическая оценка дигаплоидных линий рапса в ЦРО «Интеграция», разработка маркеров устойчивости и паспортизация культур.
+                Молекулярно-генетическая оценка дигаплоидных линий рапса в <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ЦРО «Интеграция»</span>, разработка <span class="text-emerald-600 dark:text-emerald-400 font-semibold">маркеров устойчивости</span> и паспортизация культур.
               </p>
             </div>
           </div>
@@ -105,11 +105,11 @@ import leader from './assets/images/photo_41.webp'
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
-              <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight dark:drop-shadow-md">
+              <h3 class="text-xl sm:text-2xl font-bold text-emerald-600 dark:text-emerald-400 mb-2 leading-tight [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
                 Наука & Олимпиадное движение
               </h3>
               <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_10px_rgba(255,255,255,0.9)] dark:[text-shadow:none]">
-                Доклады на конгрессах учёных, руководство проектными командами в ОЦ «Сириус», подготовка резерва сборной Москвы и победителей ВсОШ.
+                Доклады на конгрессах учёных, руководство проектными командами в <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ОЦ «Сириус»</span>, подготовка резерва <span class="text-emerald-600 dark:text-emerald-400 font-semibold">сборной Москвы</span> и победителей <span class="text-emerald-600 dark:text-emerald-400 font-semibold">ВсОШ</span>.
               </p>
             </div>
           </div>
