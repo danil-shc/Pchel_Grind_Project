@@ -168,19 +168,19 @@ const logos = [
     href: PARTNER_LINKS.sechenov,
     // Логотип вертикальный с мелким текстом под гербом — увеличенная высота
     // и contrast-125 нужны, чтобы детали оставались читаемыми в слайдере.
-    class: 'h-20 sm:h-24 md:h-28 w-auto object-contain brightness-0 invert contrast-125 opacity-90'
+    class: 'h-20 sm:h-24 md:h-28 w-auto object-contain brightness-0 contrast-125 dark:invert opacity-90'
   },
   {
     src: genotekLogo,
     alt: 'Genotek',
     href: PARTNER_LINKS.genotek,
-    class: 'h-8 sm:h-10 md:h-11 w-auto object-contain brightness-0 invert opacity-90'
+    class: 'h-8 sm:h-10 md:h-11 w-auto object-contain brightness-0 dark:invert opacity-90'
   },
   {
     src: siriusLogo,
     alt: 'Сириус',
     href: PARTNER_LINKS.sirius,
-    class: 'h-9 sm:h-11 md:h-12 w-auto object-contain brightness-0 invert opacity-90'
+    class: 'h-9 sm:h-11 md:h-12 w-auto object-contain brightness-0 dark:invert opacity-90'
   }
 ]
 
@@ -311,13 +311,13 @@ const {
         </div>
 
         <div
-          class="min-h-[160px] sm:min-h-[180px] md:min-h-0 md:h-full shrink-0 md:shrink relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-[#0B1120] px-3.5 sm:px-5 lg:px-8 pb-3.5 sm:pb-5 lg:pb-8 pt-3.5 sm:pt-6 lg:pt-8 flex flex-col justify-between group hover:border-white/30 hover:bg-white/[0.02] transition-all duration-300 shadow-2xl"
+          class="min-h-[160px] sm:min-h-[180px] md:min-h-0 md:h-full shrink-0 md:shrink relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/10 bg-white dark:bg-[#0B1120] px-3.5 sm:px-5 lg:px-8 pb-3.5 sm:pb-5 lg:pb-8 pt-3.5 sm:pt-6 lg:pt-8 flex flex-col justify-between group hover:border-emerald-500/20 dark:hover:border-white/30 hover:shadow-lg dark:hover:bg-white/[0.02] transition-all duration-300 shadow-sm dark:shadow-2xl"
           @mouseenter="pauseLogoSlider"
           @mouseleave="resumeLogoSlider">
 
           <!-- Плашка "Образование" (на ПК — абсолютно, чтобы не занимать высоту композиции) -->
           <div class="flex lg:contents justify-end items-center w-full shrink-0">
-            <span class="lg:absolute lg:top-8 lg:right-8 lg:z-10 px-3 py-1 text-xs font-medium text-white/90 bg-white/10 border border-white/20 rounded-full backdrop-blur-md shadow-sm">
+            <span class="lg:absolute lg:top-8 lg:right-8 lg:z-10 px-3 py-1 text-xs font-medium text-slate-900 dark:text-white/90 bg-slate-100 dark:bg-white/10 border border-slate-300/80 dark:border-white/20 rounded-full backdrop-blur-md shadow-sm">
               Образование
             </span>
           </div>
@@ -332,11 +332,11 @@ const {
               class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="sechenovLogo"
-                class="h-16 xl:h-19 w-auto object-contain brightness-0 invert opacity-95 contrast-125 hover:opacity-100 transition-opacity"
+                class="h-16 xl:h-19 w-auto object-contain brightness-0 contrast-125 dark:invert opacity-95 hover:opacity-100 transition-opacity"
                 alt="Сеченовский Университет" />
             </a>
 
-            <div class="w-16 xl:w-20 h-[1px] bg-white/10"></div>
+            <div class="w-16 xl:w-20 h-[1px] bg-slate-200 dark:bg-white/10"></div>
 
             <!-- Genotek -->
             <a
@@ -346,11 +346,11 @@ const {
               class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="genotekLogo"
-                class="h-7 xl:h-8 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                class="h-7 xl:h-8 w-auto object-contain brightness-0 dark:invert opacity-90 hover:opacity-100 transition-opacity"
                 alt="Genotek" />
             </a>
 
-            <div class="w-16 xl:w-20 h-[1px] bg-white/10"></div>
+            <div class="w-16 xl:w-20 h-[1px] bg-slate-200 dark:bg-white/10"></div>
 
             <!-- Сириус -->
             <a
@@ -360,7 +360,7 @@ const {
               class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="siriusLogo"
-                class="h-8 xl:h-9 w-auto object-contain brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
+                class="h-8 xl:h-9 w-auto object-contain brightness-0 dark:invert opacity-90 hover:opacity-100 transition-opacity"
                 alt="Сириус" />
             </a>
           </div>
@@ -399,21 +399,21 @@ const {
                 @click.stop="goToLogoSlide(idx)"
                 class="group/logo-progress relative flex-1 cursor-pointer touch-manipulation py-2 -my-2">
                 <span
-                  class="block h-1 rounded-full bg-white/20 overflow-hidden transition-colors duration-300 group-hover/logo-progress:bg-white/30 group-active/logo-progress:bg-white/40">
+                  class="block h-1 rounded-full bg-slate-200 dark:bg-white/20 overflow-hidden transition-colors duration-300 group-hover/logo-progress:bg-slate-300 dark:group-hover/logo-progress:bg-white/30 group-active/logo-progress:bg-slate-400 dark:group-active/logo-progress:bg-white/40">
                   <span
                     v-if="idx < activeLogoIndex"
-                    class="block h-full w-full bg-white/90 shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                    class="block h-full w-full bg-slate-900 dark:bg-white/90 dark:shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                   />
                   <span
                     v-else-if="idx === activeLogoIndex"
                     :key="`logo-progress-${activeLogoIndex}-${logoProgressKey}`"
-                    class="slide-progress-fill block h-full bg-white/90 shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+                    class="slide-progress-fill block h-full bg-slate-900 dark:bg-white/90 dark:shadow-[0_0_8px_rgba(255,255,255,0.5)]"
                     :class="{ 'slide-progress-fill--paused': isLogoPaused }"
                     :style="{ animationDuration: `${LOGO_SLIDE_DURATION_MS}ms` }"
                   />
                   <span
                     v-else
-                    class="block h-full w-0 bg-white/90"
+                    class="block h-full w-0 bg-slate-900 dark:bg-white/90"
                   />
                 </span>
               </button>
