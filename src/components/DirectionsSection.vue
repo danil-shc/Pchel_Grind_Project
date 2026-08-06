@@ -60,9 +60,20 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Биоинформатика & SNP-анализ
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                Обработка данных <span class="text-emerald-700 dark:text-emerald-400 font-semibold">NGS и GWAS</span>, аннотация вариантов (<span class="text-emerald-700 dark:text-emerald-400 font-semibold">NCBI</span>, <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ClinVar</span>, <span class="text-emerald-700 dark:text-emerald-400 font-semibold">Ensembl</span>), ведение протоколов и аналитическая биофизика (<span class="text-emerald-700 dark:text-emerald-400 font-semibold">Genotek</span> / <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ИБГ РАН</span>).
-              </p>
+              <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Обработка данных <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">NGS</strong> и <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">GWAS</strong></span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Аннотация вариантов (<span class="text-emerald-700 dark:text-emerald-400">NCBI</span>, <span class="text-emerald-700 dark:text-emerald-400">ClinVar</span>, <span class="text-emerald-700 dark:text-emerald-400">Ensembl</span>)</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Аналитическая биофизика и протоколы (<strong class="text-emerald-700 dark:text-emerald-400 font-semibold">Genotek</strong> / <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">ИБГ РАН</strong>)</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -108,9 +119,20 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Наука & Олимпиадное движение
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                Доклады на конгрессах учёных, руководство проектными командами в <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ОЦ «Сириус»</span>, подготовка резерва <span class="text-emerald-700 dark:text-emerald-400 font-semibold">сборной Москвы</span> и победителей <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ВсОШ</span>.
-              </p>
+              <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Доклады на конгрессах учёных</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Руководство проектными командами в <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">ОЦ «Сириус»</strong></span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Подготовка резерва <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">сборной Москвы</strong> и победителей <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">ВсОШ</strong></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
