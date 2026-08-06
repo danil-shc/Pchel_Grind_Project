@@ -38,7 +38,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <TrendingUp :size="20" class="text-emerald-600 dark:text-emerald-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-emerald-700 dark:text-emerald-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">21</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-emerald-700 dark:text-emerald-300 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:0_2px_6px_rgba(0,0,0,0.92),0_0_12px_rgba(0,0,0,0.6)]">21</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
@@ -66,7 +66,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <Award :size="20" class="text-blue-600 dark:text-blue-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-blue-700 dark:text-blue-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">2</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-blue-700 dark:text-blue-300 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:0_2px_6px_rgba(0,0,0,0.92),0_0_12px_rgba(0,0,0,0.6)]">2</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
@@ -94,13 +94,13 @@ import imgStudents from './assets/images/photo_42.webp'
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <Briefcase :size="20" class="text-purple-600 dark:text-purple-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]"><span class="text-purple-700 dark:text-purple-400">5+</span><span class="text-slate-900 dark:text-white"> лет</span></span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-purple-700 dark:text-purple-300 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:0_2px_6px_rgba(0,0,0,0.92),0_0_12px_rgba(0,0,0,0.6)]">5+</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
             <div class="flex flex-col justify-end mt-auto relative z-20">
               <h3 class="text-base font-semibold text-slate-900 dark:text-white mb-1 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                Опыта в генетике
+                Лет в генетике
               </h3>
               <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 <span class="text-purple-700 dark:text-purple-400 font-semibold">Genotek</span>, <span class="text-purple-700 dark:text-purple-400 font-semibold">Сеченовский Университет</span>, <span class="text-purple-700 dark:text-purple-400 font-semibold">ИБГ РАН</span>, <span class="text-purple-700 dark:text-purple-400 font-semibold">ЦРО «Интеграция»</span>
@@ -122,7 +122,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <Users :size="20" class="text-amber-600 dark:text-amber-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-amber-700 dark:text-amber-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">20+</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-amber-700 dark:text-amber-300 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:0_2px_6px_rgba(0,0,0,0.92),0_0_12px_rgba(0,0,0,0.6)]">20+</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->

@@ -315,13 +315,6 @@ const {
           @mouseenter="pauseLogoSlider"
           @mouseleave="resumeLogoSlider">
 
-          <!-- Плашка "Образование" (на ПК — абсолютно, чтобы не занимать высоту композиции) -->
-          <div class="flex lg:contents justify-end items-center w-full shrink-0">
-            <span class="lg:absolute lg:top-8 lg:right-8 lg:z-10 px-3 py-1 text-xs font-medium text-slate-900 dark:text-white/90 bg-slate-100 dark:bg-white/10 border border-slate-300/80 dark:border-white/20 rounded-full backdrop-blur-md shadow-sm">
-              Образование
-            </span>
-          </div>
-
           <!-- Desktop (lg и выше): компактный вертикальный ряд по центру, гарантированно вмещается по высоте -->
           <div class="hidden lg:flex flex-col items-center justify-center my-auto gap-6 xl:gap-8 w-full">
             <!-- Сеченовский Университет -->
