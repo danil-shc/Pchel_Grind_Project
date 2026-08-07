@@ -77,39 +77,38 @@ const yandexMapWidgetUrl =
         </div>
 
         <!-- Правая колонка: интерактивная карта -->
-        <div class="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0B1120] h-full min-h-95 flex flex-col justify-between p-6 pointer-events-none">
-          <!-- Интерактивная карта с фильтром тёмной темы -->
+        <div class="relative overflow-hidden rounded-3xl border border-gray-100 dark:border-white/10 bg-white dark:bg-[#0B1120] h-full min-h-95 flex flex-col justify-between p-6 shadow-sm dark:shadow-none pointer-events-none">
+          <!-- Светлая интерактивная карта (без инверсии) -->
           <iframe
             :src="yandexMapWidgetUrl"
-            class="absolute inset-0 w-full h-full border-0 rounded-3xl pointer-events-auto transition-all duration-300"
-            style="filter: grayscale(90%) invert(93%) hue-rotate(180deg) contrast(110%);"
+            class="map-iframe absolute inset-0 w-full h-full border-0 rounded-3xl pointer-events-auto transition-all duration-300"
             allowfullscreen
             loading="lazy"
             title="Карта: Первый МГМУ им. И.М. Сеченова"
           />
 
-          <!-- Градиентная виньетка для интеграции в дизайн -->
-          <div class="absolute inset-0 bg-linear-to-t from-[#0B1120] via-transparent to-[#0B1120]/60 pointer-events-none" />
+          <!-- Градиентная виньетка по краям карты -->
+          <div class="absolute inset-0 bg-linear-to-t from-white via-transparent to-white/40 dark:from-[#0B1120] dark:via-transparent dark:to-[#0B1120]/60 pointer-events-none" />
 
           <!-- Верхняя плашка-статус -->
-          <div class="relative z-10 flex items-center gap-2 self-start rounded-full bg-[#0B1120]/80 px-3.5 py-1.5 text-xs text-gray-300 border border-white/15 backdrop-blur-md pointer-events-auto">
+          <div class="relative z-10 flex items-center gap-2 self-start rounded-full bg-white/90 dark:bg-[#0B1120]/80 px-3.5 py-1.5 text-xs text-slate-700 dark:text-gray-300 border border-slate-200/80 dark:border-white/15 backdrop-blur-md shadow-sm dark:shadow-none pointer-events-auto">
             <span class="relative flex h-2.5 w-2.5">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 shadow-[0_0_8px_#10b981]" />
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
             </span>
             <span class="font-medium">Основная локация</span>
           </div>
 
           <!-- Нижний информационный блок и ссылка -->
           <div class="relative z-10 space-y-3 mt-auto pointer-events-auto">
-            <div class="flex items-center gap-3 rounded-2xl bg-[#0B1120]/90 p-4 border border-emerald-500/30 backdrop-blur-md shadow-2xl">
+            <div class="flex items-center gap-3 rounded-2xl bg-white/95 dark:bg-[#0B1120]/90 p-4 border border-emerald-500/30 backdrop-blur-md shadow-lg shadow-emerald-500/5 dark:shadow-2xl">
               <span class="relative flex h-3.5 w-3.5 shrink-0">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500" />
               </span>
               <div>
-                <p class="text-xs text-emerald-400 font-semibold tracking-wide">Первый МГМУ им. И.М. Сеченова</p>
-                <p class="text-sm font-medium text-white">Москва, ул. Большая Пироговская</p>
+                <p class="text-xs text-emerald-600 dark:text-emerald-400 font-bold tracking-wide">Первый МГМУ им. И.М. Сеченова</p>
+                <p class="text-sm font-semibold text-slate-800 dark:text-white">Москва, ул. Большая Пироговская</p>
               </div>
             </div>
 
@@ -117,12 +116,12 @@ const yandexMapWidgetUrl =
               :href="yandexMapsUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center justify-between w-full rounded-xl bg-white/10 px-4 py-3 text-sm font-medium text-white border border-white/15 hover:bg-emerald-500/20 hover:border-emerald-500/40 backdrop-blur-md transition-all duration-300 group"
+              class="flex items-center justify-between w-full rounded-2xl bg-emerald-500 hover:bg-emerald-600 text-white shadow-md shadow-emerald-500/20 dark:bg-emerald-500/20 dark:hover:bg-emerald-500/30 dark:text-emerald-400 dark:border dark:border-emerald-500/40 dark:shadow-none px-4 py-3.5 text-sm font-medium backdrop-blur-md transition-all duration-300 group"
             >
               <span>Открыть в Яндекс.Картах</span>
               <ExternalLink
                 :size="16"
-                class="text-emerald-400 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                class="text-white/90 dark:text-emerald-400 shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </a>
           </div>
@@ -133,3 +132,15 @@ const yandexMapWidgetUrl =
     </div>
   </section>
 </template>
+
+<style scoped>
+.map-iframe {
+  filter: saturate(0.85) contrast(1.02);
+  opacity: 0.95;
+}
+
+:global(.dark) .map-iframe {
+  filter: saturate(0.75) contrast(1.05);
+  opacity: 0.9;
+}
+</style>

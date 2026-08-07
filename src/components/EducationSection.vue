@@ -126,7 +126,7 @@ const PARTNER_LINKS = {
                 class="cursor-pointer">
                 <img 
                   :src="logoSechenov" 
-                  class="h-14 sm:h-16 w-auto object-contain brightness-0 contrast-125 dark:invert opacity-90 transition-opacity hover:opacity-100" 
+                  class="theme-logo theme-logo--contrast h-14 sm:h-16 w-auto object-contain opacity-90 transition-opacity hover:opacity-100" 
                   alt="Сеченовский Университет" 
                 />
               </a>
@@ -137,7 +137,7 @@ const PARTNER_LINKS = {
                 class="cursor-pointer">
                 <img 
                   :src="logoSirius" 
-                  class="h-7 sm:h-8 w-auto object-contain brightness-0 dark:invert opacity-85 transition-opacity hover:opacity-100" 
+                  class="h-7 sm:h-8 w-auto object-contain theme-logo opacity-85 transition-opacity hover:opacity-100" 
                   alt="ОЦ Сириус" 
                 />
               </a>

@@ -125,6 +125,25 @@
                 transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
   }
 
+  /* Тема переключается через класс .dark + Tailwind (bg/text/border), не через filter: invert(). */
+
+  /* Логотипы-партнёры: чёрный силуэт в light, белый в dark (явный opt-in). */
+  :where(.theme-logo) {
+    filter: brightness(0);
+  }
+
+  :where(.theme-logo.theme-logo--contrast) {
+    filter: brightness(0) contrast(1.25);
+  }
+
+  :where(.dark) :where(.theme-logo) {
+    filter: brightness(0) invert(1);
+  }
+
+  :where(.dark) :where(.theme-logo.theme-logo--contrast) {
+    filter: brightness(0) invert(1) contrast(1.25);
+  }
+
   /* Активация */
   .reveal-item.active {
     opacity: 1;

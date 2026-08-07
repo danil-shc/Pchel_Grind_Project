@@ -169,19 +169,19 @@ const logos = [
     href: PARTNER_LINKS.sechenov,
     // Логотип вертикальный с мелким текстом под гербом — увеличенная высота
     // и contrast-125 нужны, чтобы детали оставались читаемыми в слайдере.
-    class: 'h-20 sm:h-24 md:h-28 w-auto object-contain brightness-0 contrast-125 dark:invert opacity-90'
+    class: 'theme-logo theme-logo--contrast h-20 sm:h-24 md:h-28 w-auto object-contain opacity-90'
   },
   {
     src: genotekLogo,
     alt: 'Genotek',
     href: PARTNER_LINKS.genotek,
-    class: 'h-8 sm:h-10 md:h-11 w-auto object-contain brightness-0 dark:invert opacity-90'
+    class: 'theme-logo h-8 sm:h-10 md:h-11 w-auto object-contain opacity-90'
   },
   {
     src: siriusLogo,
     alt: 'Сириус',
     href: PARTNER_LINKS.sirius,
-    class: 'h-9 sm:h-11 md:h-12 w-auto object-contain brightness-0 dark:invert opacity-90'
+    class: 'theme-logo h-9 sm:h-11 md:h-12 w-auto object-contain opacity-90'
   }
 ]
 
@@ -329,7 +329,7 @@ const {
               class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="sechenovLogo"
-                class="h-16 xl:h-19 w-auto object-contain brightness-0 contrast-125 dark:invert opacity-95 hover:opacity-100 transition-opacity"
+                class="theme-logo theme-logo--contrast h-16 xl:h-19 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity"
                 alt="Сеченовский Университет" />
             </a>
 
@@ -343,7 +343,7 @@ const {
               class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="genotekLogo"
-                class="h-7 xl:h-8 w-auto object-contain brightness-0 dark:invert opacity-90 hover:opacity-100 transition-opacity"
+                class="theme-logo h-7 xl:h-8 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
                 alt="Genotek" />
             </a>
 
@@ -357,7 +357,7 @@ const {
               class="flex items-center justify-center w-full cursor-pointer">
               <img
                 :src="siriusLogo"
-                class="h-8 xl:h-9 w-auto object-contain brightness-0 dark:invert opacity-90 hover:opacity-100 transition-opacity"
+                class="theme-logo h-8 xl:h-9 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
                 alt="Сириус" />
             </a>
           </div>
