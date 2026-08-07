@@ -10,7 +10,7 @@ const isDark = defineModel('isDark', { type: Boolean, default: false })
     <div class="flex items-center gap-3 sm:gap-3.5 group cursor-pointer select-none min-w-0">
       <div class="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 shrink-0 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 transition-all duration-300 group-hover:border-emerald-500/40 group-hover:bg-emerald-500/20 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)]">
         <img
-          src="/favicon.svg"
+          src="/favicon-v2.svg"
           alt="Logo"
           class="w-5 h-5 sm:w-6 sm:h-6 shrink-0 transition-transform duration-300 group-hover:scale-110"
         />
