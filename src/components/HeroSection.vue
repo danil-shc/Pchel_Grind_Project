@@ -4,10 +4,11 @@ import { User } from 'lucide-vue-next'
 import TheHeader from './TheHeader.vue'
 import { useAutoSlider } from '@/composables/useAutoSlider'
 
-// Изображения для слайдера
-import photo2 from '@/components/assets/images/photo_2.webp'
+// Изображения для слайдера (первый слайд — в public/ для preload в index.html)
 import photo10 from '@/components/assets/images/photo_10.webp'
 import photo40 from '@/components/assets/images/photo_40.webp'
+
+const LCP_HERO_IMAGE = '/images/photo_2.webp'
 
 // Логотипы для карточки "Образование"
 import sechenovLogo from '@/components/assets/logos/sechenov.png'
@@ -24,7 +25,7 @@ const SLIDE_DURATION_MS = 5000
 
 const slides = [
   {
-    src: photo2,
+    src: LCP_HERO_IMAGE,
     position: 'object-center'
   },
   {
@@ -238,6 +239,9 @@ const {
               <img
                 :src="slide.src"
                 alt="Михаил Игоревич Пчелинцев"
+                :fetchpriority="index === 0 ? 'high' : 'auto'"
+                :loading="index === 0 ? 'eager' : 'lazy'"
+                decoding="async"
                 class="absolute inset-0 h-full w-full object-cover pointer-events-none transition-transform duration-[5000ms] ease-out transform-gpu"
                 :class="[
                   slide.position,

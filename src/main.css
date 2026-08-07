@@ -1,5 +1,65 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url('/fonts/subset-Inter18pt-Regular.woff2') format('woff2'),
+    url('/fonts/subset-Inter18pt-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:
+    url('/fonts/subset-Inter18pt-Medium.woff2') format('woff2'),
+    url('/fonts/subset-Inter18pt-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url('/fonts/subset-Inter18pt-SemiBold.woff2') format('woff2'),
+    url('/fonts/subset-Inter18pt-SemiBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url('/fonts/subset-Inter18pt-Bold.woff2') format('woff2'),
+    url('/fonts/subset-Inter18pt-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    url('/fonts/subset-Inter18pt-ExtraBold.woff2') format('woff2'),
+    url('/fonts/subset-Inter18pt-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src:
+    url('/fonts/subset-Inter18pt-Black.woff2') format('woff2'),
+    url('/fonts/subset-Inter18pt-Black.woff') format('woff');
+}
+
 /* Настройка темной темы */
 @custom-variant dark (&:where(.dark, .dark *));
 
