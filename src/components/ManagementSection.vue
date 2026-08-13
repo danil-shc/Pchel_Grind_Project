@@ -1,5 +1,5 @@
 <script setup>
-import { Rocket, FileText, ExternalLink, ShieldCheck, Users } from 'lucide-vue-next'
+import { Rocket, FileText, ExternalLink, ShieldCheck, Users, Trophy } from 'lucide-vue-next'
 
 const managementItems = [
   'Планирование этапов и контрольных сроков',
@@ -37,7 +37,7 @@ const publicationTopics = [
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <!-- Карточка 1: Soft скиллы & Коммуникация -->
         <div class="reveal-item delay-100 group relative overflow-hidden rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#0B1120] p-6 sm:p-8 shadow-sm dark:shadow-none transition-all duration-500 hover:border-emerald-500/40 dark:hover:border-white/30">
-          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+          <div class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-600 border border-emerald-500/20 dark:bg-white/10 dark:text-white dark:border-white/20">
             <Users :size="24" />
           </div>
 
@@ -71,19 +71,37 @@ const publicationTopics = [
             Разработка концепции и ML-алгоритмов для раннего выявления редких иммунопатологий.
           </p>
 
-          <div class="flex flex-wrap gap-2 mt-auto">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300">
+          <div class="mt-auto space-y-3">
+            <div class="rounded-xl border border-amber-500/30 dark:border-amber-500/25 bg-slate-100 dark:bg-slate-800/80 px-4 py-3">
+              <div class="flex items-start gap-3">
+                <div class="shrink-0 flex h-9 w-9 items-center justify-center rounded-lg bg-amber-500/10 dark:bg-amber-500/15 border border-amber-500/25">
+                  <Trophy :size="18" class="text-amber-600 dark:text-amber-400" />
+                </div>
+                <div class="min-w-0">
+                  <p class="text-sm font-bold text-amber-700 dark:text-amber-400 tracking-tight">
+                    ТОП-500 стартапов РФ
+                  </p>
+                  <p class="mt-0.5 text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 leading-snug">
+                    По версии Всероссийского рейтинга ТОП-1000 университетских стартапов
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300">
               <ShieldCheck :size="14" class="text-emerald-600 dark:text-emerald-400" />
               Финалист Sechenov.Tech
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300">
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300">
               <ShieldCheck :size="14" class="text-emerald-600 dark:text-emerald-400" />
               Финалист «Новаторы Москвы»
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300">
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/80 text-slate-700 dark:text-slate-300">
               <ShieldCheck :size="14" class="text-emerald-600 dark:text-emerald-400" />
               Финалист акселератора УрФУ
-            </span>
+              </span>
+            </div>
           </div>
         </div>
 

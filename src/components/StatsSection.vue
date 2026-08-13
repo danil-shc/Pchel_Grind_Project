@@ -1,6 +1,10 @@
 <script setup>
 import { TrendingUp, Award, Briefcase, Users } from 'lucide-vue-next'
 
+const WIKIPEDIA_LINKS = {
+  nafld: 'https://ru.wikipedia.org/wiki/Неалкогольная_жировая_болезнь_печени',
+}
+
 // Импорт фоновых изображений
 import imgPubs from './assets/images/photo_1.webp'
 import imgPatents from './assets/images/photo_16.webp'
@@ -75,7 +79,7 @@ import imgStudents from './assets/images/photo_42.webp'
                 Патента и разработки
               </h3>
               <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                <span class="text-blue-700 dark:text-blue-400 font-semibold">Кавернотом Меньщикова</span> и <span class="text-blue-700 dark:text-blue-400 font-semibold">ПЦР-панели</span> для аквакультуры
+                <span class="text-blue-700 dark:text-blue-400 font-semibold">Кавернотом Меньщикова</span>, <span class="text-blue-700 dark:text-blue-400 font-semibold">ПЦР-панели</span> для аквакультуры, УЗ-оценка <a :href="WIKIPEDIA_LINKS.nafld" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-700 dark:text-blue-400 cursor-pointer hover:underline underline-offset-2">НАЖБП</a>
               </p>
             </div>
           </div>
