@@ -36,9 +36,20 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Молекулярная генетика
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                Разработка <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ПЦР-тест-систем</span>, поиск <span class="text-emerald-700 dark:text-emerald-400 font-semibold">генетических маркеров</span>, конструирование панелей и исследования урологических заболеваний в <span class="text-emerald-700 dark:text-emerald-400 font-semibold">Сеченовском Университете</span>.
-              </p>
+              <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Разработка <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">ПЦР-тест-систем</strong></span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Поиск <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">генетических маркеров</strong></span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Конструирование <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">панелей</strong></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -63,15 +74,15 @@ import leader from './assets/images/photo_41.webp'
               <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 <div class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Работа с <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">международными</strong> базами</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
                   <span>Обработка данных <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">NGS</strong> и <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">GWAS</strong></span>
                 </div>
                 <div class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
-                  <span>Аннотация вариантов (<span class="text-emerald-700 dark:text-emerald-400">NCBI</span>, <span class="text-emerald-700 dark:text-emerald-400">ClinVar</span>, <span class="text-emerald-700 dark:text-emerald-400">Ensembl</span>)</span>
-                </div>
-                <div class="flex items-start gap-2.5">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
-                  <span>Аналитическая биофизика и протоколы (<strong class="text-emerald-700 dark:text-emerald-400 font-semibold">Genotek</strong> / <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">ИБГ РАН</strong>)</span>
+                  <span>Создание и аннотация наборов данных  (<span class="text-emerald-700 dark:text-emerald-400">NCBI</span>, <span class="text-emerald-700 dark:text-emerald-400">ClinVar</span>, <span class="text-emerald-700 dark:text-emerald-400">Ensembl</span>)</span>
                 </div>
               </div>
             </div>
@@ -95,9 +106,20 @@ import leader from './assets/images/photo_41.webp'
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
                 Агрогенетика & Менеджмент
               </h3>
-              <p class="text-sm sm:text-base text-slate-900 dark:text-slate-300 leading-relaxed font-normal [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                Молекулярно-генетическая оценка дигаплоидных линий рапса в <span class="text-emerald-700 dark:text-emerald-400 font-semibold">ЦРО «Интеграция»</span>, разработка <span class="text-emerald-700 dark:text-emerald-400 font-semibold">маркеров устойчивости</span> и паспортизация культур.
-              </p>
+              <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Молекулярно-генетическая оценка дигаплоидных линий рапса в <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">ЦРО «Интеграция»</strong></span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Разработка <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">маркеров устойчивости</strong></span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
+                  <span>Паспортизация <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">культур</strong></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -122,7 +144,7 @@ import leader from './assets/images/photo_41.webp'
               <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 <div class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>
-                  <span>Доклады на конгрессах учёных</span>
+                  <span>Координация и сопровождение от <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">постановки задачи</strong> до публичной <strong class="text-emerald-700 dark:text-emerald-400 font-semibold">защиты</strong></span>
                 </div>
                 <div class="flex items-start gap-2.5">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#10B981] shrink-0 shadow-[0_0_8px_rgba(16,185,129,0.8)] mt-2"></span>

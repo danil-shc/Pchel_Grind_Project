@@ -5,7 +5,7 @@ import TheHeader from './TheHeader.vue'
 import { useAutoSlider } from '@/composables/useAutoSlider'
 
 // Изображения для слайдера (первый слайд — в public/ для preload в index.html)
-import photo10 from '@/components/assets/images/photo_10.webp'
+import photo30 from '@/components/assets/images/photo_30.webp'
 import photo40 from '@/components/assets/images/photo_40.webp'
 
 const LCP_HERO_IMAGE = '/images/photo_2.webp'
@@ -29,9 +29,8 @@ const slides = [
     position: 'object-center'
   },
   {
-    src: photo10,
-    // Смещаем фото наверх на мобилках, чтобы лица были над текстом:
-    position: 'object-[center_15%] sm:object-center'
+    src: photo30,
+    position: 'object-center'
   },
   {
     src: photo40,

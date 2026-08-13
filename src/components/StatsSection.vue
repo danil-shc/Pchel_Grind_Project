@@ -66,7 +66,7 @@ import imgStudents from './assets/images/photo_42.webp'
               <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
                 <Award :size="20" class="text-blue-600 dark:text-blue-400 sm:w-6 sm:h-6" />
               </div>
-              <span class="text-3xl sm:text-4xl font-extrabold text-blue-700 dark:text-blue-300 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:0_2px_6px_rgba(0,0,0,0.92),0_0_12px_rgba(0,0,0,0.6)]">2</span>
+              <span class="text-3xl sm:text-4xl font-extrabold text-blue-700 dark:text-blue-300 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:0_2px_6px_rgba(0,0,0,0.92),0_0_12px_rgba(0,0,0,0.6)]">3</span>
             </div>
             
             <!-- Нижний блок: Заголовок + Текст -->
@@ -131,7 +131,7 @@ import imgStudents from './assets/images/photo_42.webp'
                 Победителей олимпиад
               </h3>
               <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                Подготовка учеников <span class="text-amber-700 dark:text-amber-400 font-semibold">ВсОШ</span>, <span class="text-amber-700 dark:text-amber-400 font-semibold">«Большие вызовы»</span>, <span class="text-amber-700 dark:text-amber-400 font-semibold">НТО</span>
+                Подготовка учеников <span class="text-amber-700 dark:text-amber-400 font-semibold">ВсОШ</span>, <span class="text-amber-700 dark:text-amber-400 font-semibold">«Большие вызовы»</span>, <span class="text-amber-700 dark:text-amber-400 font-semibold">Перечневых олимпиад</span>
               </p>
             </div>
           </div>

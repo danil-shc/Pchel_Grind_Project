@@ -189,13 +189,32 @@ const PARTNER_LINKS = {
                     <Check :size="12" class="text-emerald-700 dark:text-emerald-400" />
                   </span>
                   <span class="text-sm sm:text-base text-slate-900 dark:text-slate-200 font-medium leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                    Составитель заданий НТО и Всесибирской олимпиады
+                    Составитель заданий 3-х перечневых олимпиад
                   </span>
                 </li>
               </ul>
             </div>
 
-            <!-- Сетка ключевых показателей -->
+            <!-- Карточка-флагман: ВсОШ (полная ширина, контент слева — лицо на фото справа) -->
+            <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 sm:p-6 mb-4 min-h-40 sm:min-h-44 flex flex-col justify-between group">
+              <img
+                :src="imgVsosh"
+                alt=""
+                class="absolute inset-0 h-full w-full object-cover object-[72%_center] dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
+              <div class="absolute inset-0 bg-linear-to-r from-slate-50/88 via-slate-50/45 to-transparent dark:from-slate-950/92 dark:via-slate-950/50 dark:to-transparent z-10 pointer-events-none"></div>
+
+              <div class="relative z-20 mb-2 flex items-center gap-3 max-w-[min(100%,20rem)]">
+                <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
+                  <Trophy :size="20" class="text-blue-600 dark:text-blue-400 sm:w-6 sm:h-6" />
+                </div>
+                <span class="text-3xl sm:text-4xl font-extrabold text-blue-700 dark:text-blue-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">8</span>
+              </div>
+              <p class="relative text-sm sm:text-base text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 max-w-[min(100%,22rem)] sm:max-w-md [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
+                Победителей и призёров <span class="text-blue-700 dark:text-blue-400 font-semibold">Регионального</span> и <span class="text-blue-700 dark:text-blue-400 font-semibold">Заключительного</span> этапов <span class="text-blue-700 dark:text-blue-400 font-semibold">ВсОШ</span>
+              </p>
+            </div>
+
+            <!-- Сетка остальных показателей -->
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               
               <!-- Карточка A: РСОШ -->
@@ -217,25 +236,6 @@ const PARTNER_LINKS = {
                 </p>
               </div>
 
-              <!-- Карточка B: ВсОШ -->
-              <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
-                <img
-                  :src="imgVsosh"
-                  alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10 pointer-events-none"></div>
-
-                <div class="relative z-20 mb-2 flex items-center gap-3">
-                  <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
-                    <Trophy :size="20" class="text-blue-600 dark:text-blue-400 sm:w-6 sm:h-6" />
-                  </div>
-                  <span class="text-3xl sm:text-4xl font-extrabold text-blue-700 dark:text-blue-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">6 + 2</span>
-                </div>
-                <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                  Призёров региона и участников финала <span class="text-blue-700 dark:text-blue-400 font-semibold">ВсОШ</span>
-                </p>
-              </div>
-
               <!-- Карточка C: Большие вызовы -->
               <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
                 <img
@@ -252,25 +252,6 @@ const PARTNER_LINKS = {
                 </div>
                 <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                   Победителей конкурса <span class="text-purple-700 dark:text-purple-400 font-semibold">«Большие вызовы»</span>
-                </p>
-              </div>
-
-              <!-- Карточка D: Старт в медицину -->
-              <div class="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100 dark:border-white/10 dark:bg-slate-900 p-5 min-h-40 flex flex-col justify-between group">
-                <img
-                  :src="imgMedicine"
-                  alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
-                <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10 pointer-events-none"></div>
-
-                <div class="relative z-20 mb-2 flex items-center gap-3">
-                  <div class="p-2.5 rounded-xl bg-white/80 dark:bg-slate-900/60 backdrop-blur-md border border-slate-200 dark:border-slate-700/50 inline-flex items-center justify-center shrink-0">
-                    <BookOpen :size="20" class="text-amber-600 dark:text-amber-400 sm:w-6 sm:h-6" />
-                  </div>
-                  <span class="text-3xl sm:text-4xl font-extrabold text-amber-700 dark:text-amber-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">3</span>
-                </div>
-                <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                  Победителя конференции <span class="text-amber-700 dark:text-amber-400 font-semibold">«Старт в медицину»</span>
                 </p>
               </div>
 
