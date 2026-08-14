@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
+import { computed, inject, onMounted, onUnmounted, ref, watch } from 'vue'
 import { Mail, Send, Globe, ExternalLink, ChevronDown, Check } from 'lucide-vue-next'
 
 const locations = [
@@ -39,6 +39,7 @@ const yandexMapWidgetUrl = computed(() => {
 const isLocationMenuOpen = ref(false)
 const locationSelectRef = ref(null)
 const isMobileLocationPicker = ref(false)
+const isDark = inject('isDark', ref(true))
 
 function updateLocationPickerMode() {
   isMobileLocationPicker.value = window.matchMedia('(max-width: 1023px)').matches
@@ -218,6 +219,7 @@ onUnmounted(() => {
           <Transition name="location-sheet">
             <div
               v-if="isLocationMenuOpen && isMobileLocationPicker"
+              :class="{ dark: isDark }"
               class="fixed inset-0 z-50 flex items-end justify-center"
               role="dialog"
               aria-modal="true"
@@ -225,17 +227,20 @@ onUnmounted(() => {
             >
               <button
                 type="button"
-                class="absolute inset-0 bg-slate-900/55 dark:bg-black/70 backdrop-blur-[2px]"
+                class="absolute inset-0 bg-slate-900/55 backdrop-blur-[2px] dark:bg-black/70"
                 aria-label="Закрыть выбор локации"
                 @click="closeLocationMenu"
               />
 
-              <div class="location-sheet-panel relative z-10 w-full max-w-lg rounded-t-3xl border border-slate-200/80 dark:border-slate-700/80 bg-white dark:bg-slate-900 shadow-2xl shadow-black/30 px-4 pt-3 pb-[max(1rem,env(safe-area-inset-bottom))]">
-                <div class="mx-auto mb-4 h-1 w-10 rounded-full bg-slate-300/80 dark:bg-slate-600" />
+              <div
+                class="location-sheet-panel relative z-10 w-full max-w-lg rounded-t-3xl border border-slate-200/80 shadow-2xl shadow-black/30 px-4 pt-3 pb-[max(1rem,env(safe-area-inset-bottom))] dark:border-white/10 dark:shadow-black/50"
+                :style="{ backgroundColor: isDark ? '#0B1120' : '#ffffff' }"
+              >
+                <div class="mx-auto mb-4 h-1 w-10 rounded-full bg-slate-300/80 dark:bg-white/20" />
 
                 <div class="mb-4 px-1">
-                  <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Локация</p>
-                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Выберите место на карте</p>
+                  <p class="text-xs font-bold text-slate-500 uppercase tracking-wider dark:text-slate-400">Локация</p>
+                  <p class="mt-1 text-sm text-slate-600 dark:text-slate-500">Выберите место на карте</p>
                 </div>
 
                 <ul role="listbox" class="space-y-2">
@@ -249,8 +254,8 @@ onUnmounted(() => {
                       type="button"
                       class="location-select-option w-full flex items-start justify-between gap-3 rounded-2xl border px-4 py-3.5 text-left transition-all duration-200 ease-out cursor-pointer outline-none"
                       :class="selectedLocationId === location.id
-                        ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 shadow-[0_0_0_1px_rgba(16,185,129,0.12)]'
-                        : 'border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:border-emerald-500/25 hover:bg-emerald-500/5 dark:hover:bg-emerald-500/10'"
+                        ? 'border-emerald-500/40 bg-emerald-500/10 text-emerald-700 shadow-[0_0_0_1px_rgba(16,185,129,0.12)] dark:border-emerald-500/40 dark:bg-emerald-500/15 dark:text-emerald-400 dark:shadow-[0_0_0_1px_rgba(16,185,129,0.2)]'
+                        : 'border-slate-200 bg-white text-slate-700 hover:border-emerald-500/25 hover:bg-emerald-500/5 dark:border-slate-800 dark:bg-[#0d131f] dark:text-slate-200 dark:hover:border-emerald-500/30 dark:hover:bg-emerald-500/10'"
                       @click="selectLocation(location.id)"
                     >
                       <span class="text-sm sm:text-base font-medium leading-snug">{{ location.label }}</span>

@@ -30,7 +30,7 @@ const slides = [
   },
   {
     src: photo31,
-    position: 'object-center'
+    position: 'object-[center_82%] md:object-center'
   },
   {
     src: photo40,

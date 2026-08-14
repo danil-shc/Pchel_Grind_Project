@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { provide, ref } from 'vue'
 import HeroSection from './components/HeroSection.vue'
 import StatsSection from './components/StatsSection.vue'
 import DirectionsSection from './components/DirectionsSection.vue'
@@ -9,6 +9,7 @@ import ContactsSection from './components/ContactsSection.vue'
 import FooterSection from './components/FooterSection.vue'
 
 const isDark = ref(true)
+provide('isDark', isDark)
 </script>
 
 <template>
