@@ -1,7 +1,7 @@
 <script setup>
-import genetics from './assets/images/photo_20.webp'
+import genetics from './assets/images/photo_21.webp'
 import bioinformatics from './assets/images/photo_29.webp'
-import medicine from './assets/images/photo_21.webp'
+import medicine from './assets/images/photo_20.webp'
 import agrogenetics from './assets/images/photo_5.webp'
 import leader from './assets/images/photo_41.webp'
 </script>
@@ -25,7 +25,7 @@ import leader from './assets/images/photo_41.webp'
             <img 
               :src="genetics" 
               alt="Молекулярная генетика" 
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
+              class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
             <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
@@ -70,7 +70,7 @@ import leader from './assets/images/photo_41.webp'
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
-                Биоинформатика & SNP-анализ
+                Биоинформатика &amp; SNP-анализ
               </h3>
               <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 <div class="flex items-start gap-2.5">
@@ -94,8 +94,8 @@ import leader from './assets/images/photo_41.webp'
           <div class="relative overflow-hidden rounded-3xl border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none min-h-[320px] sm:min-h-[360px] p-6 sm:p-8 flex flex-col justify-between group transition-all duration-300 hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-500/10">
             <img 
               :src="medicine" 
-              alt="Исследования заболеваний и генетическая диагностика" 
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 z-0"
+              alt="Исследования &amp; Диагностика" 
+              class="absolute inset-0 w-full h-full object-cover object-[50%_18%] transition-transform duration-700 ease-out group-hover:scale-105 z-0"
             />
             <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
@@ -105,7 +105,7 @@ import leader from './assets/images/photo_41.webp'
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
-                Исследования заболеваний & Генетическая диагностика
+                Исследования &amp; Диагностика
               </h3>
               <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 max-w-3xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 <div class="flex items-start gap-2.5">
@@ -135,12 +135,12 @@ import leader from './assets/images/photo_41.webp'
             <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-white/85 dark:bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-400 shadow-lg">
-              Агробиотех & Проекты
+              Агробиотех &amp; Проекты
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
-                Агрогенетика & Менеджмент
+                Агрогенетика &amp; Менеджмент
               </h3>
               <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 <div class="flex items-start gap-2.5">
@@ -170,12 +170,12 @@ import leader from './assets/images/photo_41.webp'
             <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent z-10 pointer-events-none"></div>
             
             <div class="relative z-20 self-start inline-block bg-white/85 dark:bg-slate-950/80 backdrop-blur-md border border-emerald-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-400 shadow-lg">
-              Наставничество & Спикерство
+              Наставничество &amp; Спикерство
             </div>
 
             <div class="relative z-20 mt-auto flex flex-col justify-end">
               <h3 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-2 leading-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none] dark:drop-shadow-md">
-                Наука & Олимпиадное движение
+                Наука &amp; Олимпиадное движение
               </h3>
               <div class="space-y-2.5 text-sm sm:text-base text-slate-900 dark:text-slate-300 max-w-2xl [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
                 <div class="flex items-start gap-2.5">

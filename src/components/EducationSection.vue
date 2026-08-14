@@ -1,12 +1,11 @@
 <script setup>
-import { GraduationCap, Trophy, Award, BookOpen, CheckCircle, Check } from 'lucide-vue-next'
+import { GraduationCap, Trophy, Award, CheckCircle, Check } from 'lucide-vue-next'
 
 // Фоновые изображения для баннера наставничества и карточек результатов
 import imgMentorship from './assets/images/photo_3.webp'
-import imgRsosh from './assets/images/photo_25.webp'
+import imgRsosh from './assets/images/photo_49.webp'
 import imgVsosh from './assets/images/photo_46.webp'
-import imgChallenges from './assets/images/photo_45.webp'
-import imgMedicine from './assets/images/photo_22.webp'
+import imgChallenges from './assets/images/photo_51.webp'
 import logoSechenov from '@/components/assets/logos/sechenov.png'
 import logoSirius from '@/components/assets/logos/sirius.png'
 
@@ -26,7 +25,7 @@ const PARTNER_LINKS = {
           Бэкграунд и Наставничество
         </span>
         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight mt-2 mb-4 text-slate-900 dark:text-white">
-          Академическая база & Результаты
+          Академическая база &amp; Результаты
         </h2>
         <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
           Фундаментальное медицинское образование и успехи воспитанников на всероссийском уровне.
@@ -36,7 +35,7 @@ const PARTNER_LINKS = {
       <!-- Две колонки: Образование и Результаты -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
         
-        <!-- Колонка 1: Образование & Квалификация -->
+        <!-- Колонка 1: Образование &amp; Квалификация -->
         <div class="reveal-item delay-100">
           <div class="h-full flex flex-col bg-white dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800/80 shadow-sm dark:shadow-none rounded-2xl p-6 sm:p-8">
             
@@ -46,7 +45,7 @@ const PARTNER_LINKS = {
                 <GraduationCap :size="20" />
               </div>
               <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
-                Образование & Квалификация
+                Образование &amp; Квалификация
               </h3>
             </div>
 
@@ -222,7 +221,7 @@ const PARTNER_LINKS = {
                 <img
                   :src="imgRsosh"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
+                  class="absolute inset-0 h-full w-full object-cover object-[center_36%] sm:object-center dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10 pointer-events-none"></div>
 
                 <div class="relative z-20 mb-2 flex items-center gap-3">
@@ -241,7 +240,7 @@ const PARTNER_LINKS = {
                 <img
                   :src="imgChallenges"
                   alt=""
-                  class="absolute inset-0 h-full w-full object-cover dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
+                  class="absolute inset-0 h-full w-full object-cover object-[72%_50%] sm:object-center dark:opacity-50 transition-transform duration-700 ease-out group-hover:scale-105" />
                 <div class="absolute inset-0 bg-linear-to-t from-slate-50/82 via-slate-50/40 to-transparent dark:from-slate-950/90 dark:via-slate-950/55 dark:to-slate-950/15 z-10 pointer-events-none"></div>
 
                 <div class="relative z-20 mb-2 flex items-center gap-3">
