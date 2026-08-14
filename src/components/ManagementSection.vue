@@ -11,9 +11,9 @@ const managementItems = [
 
 const publicationTopics = [
   'Урология',
-  'Иммуногенетика',
+  'Генетика & Биоинформатика',
   'Вирусология (SARS-CoV-2, HIV-1)',
-  'Агробиология',
+  'Агробиотехнология',
 ]
 </script>
 
@@ -51,7 +51,7 @@ const publicationTopics = [
               :key="item"
               class="flex items-start gap-3"
             >
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#10B981] shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600 shadow-[0_0_8px_rgba(5,150,105,0.6)] dark:bg-white dark:shadow-[0_0_8px_rgba(255,255,255,0.6)]"></span>
               <span>{{ item }}</span>
             </div>
           </div>
@@ -125,7 +125,7 @@ const publicationTopics = [
               :key="topic"
               class="flex items-start gap-3"
             >
-              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_rgba(139,92,246,0.8)]"></span>
+              <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-violet-600 shadow-[0_0_8px_rgba(124,58,237,0.6)] dark:bg-violet-400 dark:shadow-[0_0_8px_rgba(167,139,250,0.6)]"></span>
               <span>{{ topic }}</span>
             </div>
           </div>

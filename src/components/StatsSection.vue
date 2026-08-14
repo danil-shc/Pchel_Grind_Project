@@ -51,7 +51,7 @@ import imgStudents from './assets/images/photo_42.webp'
                 Публикация
               </h3>
               <p class="text-sm text-slate-900 dark:text-slate-200 font-normal leading-relaxed [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                Урология, иммуногенетика, агробиотех, вирусология (<span class="text-emerald-700 dark:text-emerald-400 font-semibold">ORCID</span>, <span class="text-emerald-700 dark:text-emerald-400 font-semibold">РИНЦ</span>)
+                Урология, генетика, биоинформатика, агробиотех, вирусология (<span class="text-emerald-700 dark:text-emerald-400 font-semibold">ORCID</span>, <span class="text-emerald-700 dark:text-emerald-400 font-semibold">РИНЦ</span>)
               </p>
             </div>
           </div>

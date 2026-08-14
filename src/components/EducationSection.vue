@@ -251,7 +251,7 @@ const PARTNER_LINKS = {
                   <span class="text-3xl sm:text-4xl font-extrabold text-purple-700 dark:text-purple-400 tracking-tight [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">6</span>
                 </div>
                 <p class="relative text-sm text-slate-900 dark:text-slate-200 font-medium leading-snug z-20 [text-shadow:0_1px_3px_rgba(255,255,255,0.95),0_0_10px_rgba(255,255,255,0.75)] dark:[text-shadow:none]">
-                  Победителей <span class="text-purple-700 dark:text-purple-400 font-semibold">международного</span> конкурса научно-технологических проектов <span class="text-purple-700 dark:text-purple-400 font-semibold">«Большие вызовы»</span>
+                  Дипломантов <span class="text-purple-700 dark:text-purple-400 font-semibold">международного</span> конкурса научно-технологических проектов <span class="text-purple-700 dark:text-purple-400 font-semibold">«Большие вызовы»</span>
                 </p>
               </div>
 
