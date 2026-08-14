@@ -5,7 +5,7 @@ import TheHeader from './TheHeader.vue'
 import { useAutoSlider } from '@/composables/useAutoSlider'
 
 // Изображения для слайдера (первый слайд — в public/ для preload в index.html)
-import photo30 from '@/components/assets/images/photo_30.webp'
+import photo31 from '@/components/assets/images/photo_31.webp'
 import photo40 from '@/components/assets/images/photo_40.webp'
 
 const LCP_HERO_IMAGE = '/images/photo_2.webp'
@@ -29,7 +29,7 @@ const slides = [
     position: 'object-center'
   },
   {
-    src: photo30,
+    src: photo31,
     position: 'object-center'
   },
   {
