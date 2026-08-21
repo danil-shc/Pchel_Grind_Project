@@ -29,12 +29,12 @@ const slides = [
     position: 'object-center'
   },
   {
-    src: photo31,
-    position: 'object-[center_82%] md:object-center'
-  },
-  {
     src: photo40,
     position: 'object-center'
+  },
+  {
+    src: photo31,
+    position: 'object-[center_82%] md:object-center'
   }
 ]
 
