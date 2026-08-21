@@ -11,7 +11,8 @@ import photo40 from '@/components/assets/images/photo_40.webp'
 const LCP_HERO_IMAGE = '/images/photo_2.webp'
 
 // Логотипы для карточки "Образование"
-import sechenovLogo from '@/components/assets/logos/sechenov.png'
+import sechenovLogoBlack from '@/components/assets/logos/sechenov_black.svg'
+import sechenovLogoWhite from '@/components/assets/logos/sechenov_white.svg'
 import genotekLogo from '@/components/assets/logos/genotek.png'
 import siriusLogo from '@/components/assets/logos/sirius.png'
 
@@ -163,24 +164,23 @@ const LOGO_SLIDE_DURATION_MS = 3000
 
 const logos = [
   {
-    src: sechenovLogo,
+    srcLight: sechenovLogoWhite,
+    srcDark: sechenovLogoBlack,
     alt: 'Сеченовский Университет',
     href: PARTNER_LINKS.sechenov,
-    // Логотип вертикальный с мелким текстом под гербом — увеличенная высота
-    // и contrast-125 нужны, чтобы детали оставались читаемыми в слайдере.
-    class: 'theme-logo theme-logo--contrast h-20 sm:h-24 md:h-28 w-auto object-contain opacity-90'
+    class: 'h-14 sm:h-16 md:h-16 w-auto object-contain opacity-90'
   },
   {
     src: genotekLogo,
     alt: 'Genotek',
     href: PARTNER_LINKS.genotek,
-    class: 'theme-logo h-8 sm:h-10 md:h-11 w-auto object-contain opacity-90'
+    class: 'theme-logo h-10 sm:h-12 md:h-12 w-auto object-contain opacity-90'
   },
   {
     src: siriusLogo,
     alt: 'Сириус',
     href: PARTNER_LINKS.sirius,
-    class: 'theme-logo h-9 sm:h-11 md:h-12 w-auto object-contain opacity-90'
+    class: 'theme-logo h-11 sm:h-12 md:h-14 w-auto object-contain opacity-90'
   }
 ]
 
@@ -307,14 +307,14 @@ const {
               </div>
               <div class="flex items-start gap-2.5">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 dark:bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] shrink-0 mt-1.5"></span>
-                <span class="leading-snug">Педагог <span class="font-semibold text-emerald-600 dark:text-emerald-400">АПО</span> и <span class="font-semibold text-emerald-600 dark:text-emerald-400">ЦПМ</span></span>
+                <span class="leading-snug">Методист <span class="font-semibold text-emerald-600 dark:text-emerald-400">АПО</span> и Педагог <span class="font-semibold text-emerald-600 dark:text-emerald-400">ЦПМ</span></span>
               </div>
             </div>
           </div>
         </div>
 
         <div
-          class="min-h-[160px] sm:min-h-[180px] md:min-h-0 md:h-full shrink-0 md:shrink relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/10 bg-white dark:bg-[#0B1120] px-3.5 sm:px-5 lg:px-8 pb-3.5 sm:pb-5 lg:pb-8 pt-3.5 sm:pt-6 lg:pt-8 flex flex-col justify-between group hover:border-emerald-500/20 dark:hover:border-white/30 hover:shadow-lg dark:hover:bg-white/[0.02] transition-all duration-300 shadow-sm dark:shadow-2xl"
+          class="min-h-[180px] sm:min-h-[200px] md:min-h-0 md:h-full shrink-0 md:shrink relative overflow-hidden rounded-2xl sm:rounded-3xl border border-slate-200/60 dark:border-white/10 bg-white dark:bg-[#0B1120] px-3.5 sm:px-5 lg:px-8 pb-3.5 sm:pb-5 lg:pb-8 pt-3.5 sm:pt-6 lg:pt-8 flex flex-col justify-between group hover:border-emerald-500/20 dark:hover:border-white/30 hover:shadow-lg dark:hover:bg-white/[0.02] transition-all duration-300 shadow-sm dark:shadow-2xl"
           @mouseenter="pauseLogoSlider"
           @mouseleave="resumeLogoSlider">
 
@@ -327,8 +327,12 @@ const {
               rel="noopener noreferrer"
               class="flex items-center justify-center w-full cursor-pointer">
               <img
-                :src="sechenovLogo"
-                class="theme-logo theme-logo--contrast h-16 xl:h-19 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity"
+                :src="sechenovLogoWhite"
+                class="block dark:hidden h-11 xl:h-12 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity"
+                alt="Сеченовский Университет" />
+              <img
+                :src="sechenovLogoBlack"
+                class="hidden dark:block h-11 xl:h-12 w-auto object-contain opacity-95 hover:opacity-100 transition-opacity"
                 alt="Сеченовский Университет" />
             </a>
 
@@ -375,7 +379,18 @@ const {
                   target="_blank"
                   rel="noopener noreferrer"
                   class="cursor-pointer">
+                  <template v-if="logos[activeLogoIndex].srcLight">
+                    <img
+                      :src="logos[activeLogoIndex].srcLight"
+                      :class="['block dark:hidden', logos[activeLogoIndex].class]"
+                      :alt="logos[activeLogoIndex].alt" />
+                    <img
+                      :src="logos[activeLogoIndex].srcDark"
+                      :class="['hidden dark:block', logos[activeLogoIndex].class]"
+                      :alt="logos[activeLogoIndex].alt" />
+                  </template>
                   <img
+                    v-else
                     :src="logos[activeLogoIndex].src"
                     :class="logos[activeLogoIndex].class"
                     :alt="logos[activeLogoIndex].alt" />

@@ -6,7 +6,8 @@ import imgMentorship from './assets/images/photo_3.webp'
 import imgRsosh from './assets/images/photo_49.webp'
 import imgVsosh from './assets/images/photo_46.webp'
 import imgChallenges from './assets/images/photo_51.webp'
-import logoSechenov from '@/components/assets/logos/sechenov.png'
+import logoSechenovBlack from '@/components/assets/logos/sechenov_black.svg'
+import logoSechenovWhite from '@/components/assets/logos/sechenov_white.svg'
 import logoSirius from '@/components/assets/logos/sirius.png'
 
 const PARTNER_LINKS = {
@@ -117,28 +118,30 @@ const PARTNER_LINKS = {
             </div>
 
             <!-- Логотипы внизу карточки -->
-            <div class="mt-auto pt-6 border-t border-slate-200/60 dark:border-slate-800/60 flex items-center justify-around gap-6">
+            <div class="mt-16 sm:mt-auto pt-8 sm:pt-6 border-t border-slate-200/60 dark:border-slate-800/60 flex items-center justify-around gap-6">
               <a
                 :href="PARTNER_LINKS.sechenov"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="cursor-pointer">
-                <img 
-                  :src="logoSechenov" 
-                  class="theme-logo theme-logo--contrast h-14 sm:h-16 w-auto object-contain opacity-90 transition-opacity hover:opacity-100" 
-                  alt="Сеченовский Университет" 
-                />
+                <img
+                  :src="logoSechenovWhite"
+                  class="block dark:hidden h-12 sm:h-14 w-auto object-contain opacity-90 transition-opacity hover:opacity-100"
+                  alt="Сеченовский Университет" />
+                <img
+                  :src="logoSechenovBlack"
+                  class="hidden dark:block h-12 sm:h-14 w-auto object-contain opacity-90 transition-opacity hover:opacity-100"
+                  alt="Сеченовский Университет" />
               </a>
               <a
                 :href="PARTNER_LINKS.sirius"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="cursor-pointer">
-                <img 
-                  :src="logoSirius" 
-                  class="h-7 sm:h-8 w-auto object-contain theme-logo opacity-85 transition-opacity hover:opacity-100" 
-                  alt="ОЦ Сириус" 
-                />
+                <img
+                  :src="logoSirius"
+                  class="h-7 sm:h-8 w-auto object-contain theme-logo opacity-85 transition-opacity hover:opacity-100"
+                  alt="ОЦ Сириус" />
               </a>
             </div>
           </div>
