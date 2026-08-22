@@ -15,7 +15,7 @@ import { Send, ArrowUpRight } from 'lucide-vue-next'
             Пчелинцев М.И.
           </h3>
           <p class="text-sm text-slate-600 dark:text-slate-400">
-            Исследователь, биоинформатик, преподаватель
+            Методист, ученый, биоинформатик, преподаватель
           </p>
         </div>
 
