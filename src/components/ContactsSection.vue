@@ -136,7 +136,7 @@ onUnmounted(() => {
           </div>
 
           <!-- Telegram -->
-          <div class="group bg-white dark:bg-slate-900/50 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300">
+          <div class="group bg-white dark:bg-slate-900/50 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none rounded-2xl p-6 hover:border-blue-500/30 transition-all duration-300">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-600 dark:text-blue-400 shrink-0 group-hover:bg-blue-500/20 transition-colors">
                 <Send :size="20" />
@@ -151,7 +151,7 @@ onUnmounted(() => {
           </div>
 
           <!-- Локация -->
-          <div class="group bg-white dark:bg-slate-900/50 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none rounded-2xl p-6 hover:border-emerald-500/30 transition-all duration-300">
+          <div class="group bg-white dark:bg-slate-900/50 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none rounded-2xl p-6 hover:border-purple-500/30 transition-all duration-300">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0 group-hover:bg-purple-500/20 transition-colors">
                 <Globe :size="20" />
